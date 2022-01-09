@@ -1,0 +1,210 @@
+// Protocol button position and style
+.div-navigation-protocol {
+  display: flex;
+  margin: 10px auto;
+}
+
+.div-navigation-protocol button {
+  margin-left: 10px;
+}
+
+// div-settings-flex-center
+.div-settings-flex-center {
+  display: flex;
+  justify-content: center;
+  margin: 15px auto;
+}
+
+// Status red
+.icon-status-red {
+  color: red;
+  margin-left: 25px;
+}
+
+// Status green
+.icon-status-green {
+  color: green;
+  margin-left: 25px;
+}
+
+// FormField button
+.infoButton button {
+  margin-left: 20px;
+  position: relative;
+  top: 13px;
+  height: 25px !important;
+  width: 25px !important;
+  font-size: 16px !important;
+  line-height: 0 !important;
+}
+
+// Input styles
+.div-protocol-flexBox {
+  display: flex;
+  padding: 10px 0;
+}
+
+.div-protocol-flexBoxRadio {
+  padding: 10px 0;
+  display: block;
+}
+
+.div-protocol-flexBox button {
+  margin-left: 20px;
+}
+
+.div-protocol-flexBox mat-radio-group {
+  margin: 5px 0 0 40px
+}
+
+mat-dialog-content {
+  margin-left: 250px !important;
+}
+
+// Radiobutton style
+.div-protocol-radio {
+  padding: 10px 0;
+  display: block !important;
+}
+
+.div-protocol-radio label {
+  display: block !important;
+}
+
+.div-protocol-radio mat-radio-group {
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Radiobutton size
+.mat-radio-group-10Percent mat-radio-button {
+  margin-right: 15px;
+  flex: 0 0 10%;
+}
+
+.mat-radio-group-30Percent mat-radio-button {
+  margin-right: 15px;
+  flex: 0 0 30%;
+}
+
+.mat-radio-group-50Percent mat-radio-button {
+  margin-right: 15px;
+  flex: 0 0 45%;
+}
+
+// Input forms style
+mat-form-field {
+  width: 40%;
+}
+
+.mat-form-field-time {
+  position: relative;
+  bottom: 10px;
+  width: 40%;
+}
+
+.timepicker mat-icon {
+  position: relative;
+  top: 8px;
+  color: #737373;
+}
+
+.infoButtonLabel button {
+  margin-left: 20px;
+  position: relative;
+  top: -3px;
+  height: 25px !important;
+  width: 25px !important;
+  font-size: 16px !important;
+  line-height: 0 !important;
+}
+
+.div-protocol-radio-flexbox {
+  display: flex;
+}
+
+mat-radio-button {
+  font-size: 14px;
+}
+
+.group {
+  padding: 5px 5px 5px 20px;
+  margin: 5px;
+}
+
+.custom-hint {
+  color: white;
+}
+
+.div-protocol-flexBox-Protnr {
+  display: block;
+  padding: 10px 0px;
+}
+
+.div-protocol-flexBox-Protnr button {
+  margin-left: 20px;
+}
+
+.field {
+  display: flex;
+  margin: 0 0 10px 0;
+}
+
+.field button {
+  margin-left: 20px;
+}
+
+.mat-error-RadioGroup {
+  font-size: 10.5px;
+}
+
+.protocolSetButton {
+  min-width: 105px;
+}
+
+.protocolInsertDatum {
+  min-width: 150px
+}
+
+// Autosave set style
+.autoSave p {
+  font-size: 12px;
+  line-break: auto;
+  white-space: pre-wrap;
+  line-height: 1;
+  text-align: center;
+  margin: 0;
+}
+
+.autoSave mat-icon {
+  margin: 1px auto;
+  font-size: 22px;
+  display: block;
+}
+
+.autoSave {
+  height: 50px;
+  padding:2px;
+}
+.autoSave mat-spinner::ng-deep circle{
+  stroke: #FFFFFF !important;
+}
+.autoSave mat-spinner{
+  margin:3px auto 3px auto;
+}
+
+.spacerHeight-50{
+  height:50px;
+  display:block;
+}
+
+// on screen width change div-protocol-flexBoxRadio
+@media only screen and (min-width: 1367px) {
+  .div-protocol-flexBoxRadio {
+    padding: 10px 0;
+    width: 75%;
+    display: block;
+  }
+}
+

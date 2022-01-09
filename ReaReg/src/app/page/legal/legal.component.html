@@ -1,0 +1,122 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button and page title -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"legalPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- License ReaReg -->
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="1">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>copyright</mat-icon>
+          {{'legalPage.reareg.title'|translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>{{'legalPage.reareg.gpl'|translate}}</h2>
+      <p>{{'legalPage.reareg.licensePart1'|translate}}</p>
+      <p>{{'legalPage.reareg.licensePart2'|translate}}</p>
+      <br>
+      <p>{{'legalPage.reareg.licensePart3'|translate}}</p>
+      <br>
+      <p>{{'legalPage.reareg.licensePart4'|translate}}</p>
+      <br>
+      <p>{{'legalPage.reareg.licensePart5'|translate}}<a href="https://www.gnu.org/licenses">https://www.gnu.org/licenses/</a>.</p>
+    </mat-expansion-panel>
+    <!-- Licence agreement from third parties Extensions -->
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="2">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>copyright</mat-icon>
+          {{'legalPage.thirdParties.title' | translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>{{'legalPage.thirdParties.mit' | translate}}</h2>
+      <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>
+      <br><br>
+      <p>{{'legalPage.thirdParties.licensePart1' | translate}}</p>
+      <p>{{'legalPage.thirdParties.licensePart2' | translate}}</p>
+      <p>{{'legalPage.thirdParties.licensePart3' | translate}}</p>
+      <br>
+      <p>{{'legalPage.thirdParties.listTitle' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/animations">{{'legalPage.thirdParties.link1' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy1' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/cdk">{{'legalPage.thirdParties.link2' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy2' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/common">{{'legalPage.thirdParties.link3' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy3' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/compiler">{{'legalPage.thirdParties.link4' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy4' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/core">{{'legalPage.thirdParties.link5' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy5' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/forms">{{'legalPage.thirdParties.link6' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy6' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/material">{{'legalPage.thirdParties.link7' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy7' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/material-moment-adapter">{{'legalPage.thirdParties.link8' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy8' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/platform-browser">{{'legalPage.thirdParties.link9' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy9' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/platform-browser-dynamic">{{'legalPage.thirdParties.link10' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy10' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/router">{{'legalPage.thirdParties.link11' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy11' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@angular/service-worker">{{'legalPage.thirdParties.link12' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy12' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@auth0/angular-jwt">{{'legalPage.thirdParties.link13' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy13' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@ngx-translate/core">{{'legalPage.thirdParties.link14' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy14' | translate}}</p>
+      <a href="https://www.npmjs.com/package/@ngx-translate/http-loader">{{'legalPage.thirdParties.link15' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy15' | translate}}</p>
+      <a href="https://www.npmjs.com/package/moment">{{'legalPage.thirdParties.link16' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy16' | translate}}</p>
+      <a href="https://www.npmjs.com/package/ngx-material-timepicker">{{'legalPage.thirdParties.link17' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy17' | translate}}</p>
+      <a href="https://www.npmjs.com/package/ngx-papaparse">{{'legalPage.thirdParties.link18' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy18' | translate}}</p>
+      <a href="https://www.npmjs.com/package/zone.js">{{'legalPage.thirdParties.link19' | translate}}</a>
+      <p>{{'legalPage.thirdParties.copy19' | translate}}</p>
+    </mat-expansion-panel>
+    <!-- Licence agreement from middleware Extensions -->
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="2">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>copyright</mat-icon>
+          {{'legalPage.middleware.title' | translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <h2>{{'legalPage.middleware.mit' | translate}}</h2>
+      <a href="https://opensource.org/licenses/MIT">https://opensource.org/licenses/MIT</a>
+      <br><br>
+      <p>{{'legalPage.middleware.licensePart1' | translate}}</p>
+      <p>{{'legalPage.middleware.licensePart2' | translate}}</p>
+      <p>{{'legalPage.middleware.licensePart3' | translate}}</p>
+      <br>
+      <p>{{'legalPage.middleware.listTitle' | translate}}</p>
+      <a href="https://www.npmjs.com/package/bcrypt">{{'legalPage.middleware.link1' | translate}}</a>
+      <p>{{'legalPage.middleware.copy1' | translate}}</p>
+      <a href="https://www.npmjs.com/package/cors">{{'legalPage.middleware.link2' | translate}}</a>
+      <p>{{'legalPage.middleware.copy2' | translate}}</p>
+      <a href="https://www.npmjs.com/package/express">{{'legalPage.middleware.link3' | translate}}</a>
+      <p>{{'legalPage.middleware.copy3' | translate}}</p>
+      <a href="https://www.npmjs.com/package/jsonwebtoken">{{'legalPage.middleware.link4' | translate}}</a>
+      <p>{{'legalPage.middleware.copy4' | translate}}</p>
+      <a href="https://www.npmjs.com/package/pg">{{'legalPage.thirdParties.link5' | translate}}</a>
+      <p>{{'legalPage.middleware.copy5' | translate}}</p>
+      <a href="https://www.npmjs.com/package/body-parser">{{'legalPage.middleware.link6' | translate}}</a>
+      <p>{{'legalPage.middleware.copy6' | translate}}</p>
+    </mat-expansion-panel>
+  </mat-sidenav-content>
+</mat-sidenav-container>

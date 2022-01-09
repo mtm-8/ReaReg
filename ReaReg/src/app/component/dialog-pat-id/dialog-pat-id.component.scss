@@ -1,0 +1,22 @@
+// Set title alignment
+h2 {
+  text-align: center;
+  margin: 25px auto 0;
+}
+
+// Set position and size of input
+.div-protocol-flexBox {
+  display: flex;
+  justify-content: center;
+  padding: 50px 10px;
+}
+
+.div-protocol-flexBox mat-form-field {
+  width: 50%;
+}
+
+// Set space between cancel an create button
+mat-dialog-actions {
+  justify-content: space-between !important;
+}
+

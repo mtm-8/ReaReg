@@ -1,0 +1,92 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button, page title and filter button -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"overviewPage.title"| translate}}</span>
+        <button (click)="filterStatus = !filterStatus" mat-button>
+          <mat-icon>filter_list</mat-icon>
+          {{"menu.filter" | translate}}
+        </button>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Filter -->
+    <app-filter (searchEvent)="updateFilter($event)" *ngIf="filterStatus"></app-filter>
+    <!-- New Protocol button -->
+    <button [routerLink]="'/protocol'" class="add-button" color="primary" mat-raised-button>
+      <mat-icon>add</mat-icon>
+      {{'overviewPage.new'| translate}}
+    </button>
+    <div class="table-container">
+      <div *ngIf="isLoadingResults || isRateLimitReached" class="table-loading-shade">
+        <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
+      </div>
+      <!-- Sortable table -->
+      <table [dataSource]="data" mat-table matSort matSortActive="datum" matSortDirection="desc">
+        <!-- Column with link to protocol -->
+        <ng-container matColumnDef="action">
+          <th *matHeaderCellDef mat-header-cell></th>
+          <td *matCellDef="let row" mat-cell><a color="primary" href="/protocol;p={{row['record_id']}}" mat-button>
+            <mat-icon>create</mat-icon>
+            {{"overviewPage.edit" | translate}}
+          </a></td>
+        </ng-container>
+        <!-- Column with patient id -->
+        <ng-container matColumnDef="patid">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C1' | translate}} </th>
+          <td *matCellDef="let row" mat-cell> {{row['patid'] }} </td>
+        </ng-container>
+        <!-- Column with converted date -->
+        <ng-container matColumnDef="datum">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C2' | translate}} </th>
+          <td *matCellDef="let row" mat-cell> {{row['datum'] === '-' ? '-' : row['datum']  | date: 'dd.MM.yyyy'}}  </td>
+        </ng-container>
+        <!-- Column with converted birthdate -->
+        <ng-container matColumnDef="gebdat">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C3' | translate}} </th>
+          <td *matCellDef="let row" mat-cell> {{row['gebdat'] === '-' ? '-' : row['gebdat']  | date: 'dd.MM.yyyy'}} </td>
+        </ng-container>
+        <!-- Column with gender -->
+        <ng-container matColumnDef="geschl">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C4' | translate}} </th>
+          <td *matCellDef="let row" mat-cell> {{row['geschl']}} </td>
+        </ng-container>
+        <!-- Column with converted discharge date -->
+        <ng-container matColumnDef="entldat">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C5' | translate}} </th>
+          <td *matCellDef="let row" mat-cell> {{row['entldat'] === '-' ? '-' : row['entldat'] | date:'dd.MM.yyyy'}} </td>
+        </ng-container>
+        <!-- Column with EVprotnrs -->
+        <ng-container matColumnDef="evprotnr">
+          <th *matHeaderCellDef mat-header-cell > {{'overviewPage.table.C7' | translate}} </th>
+          <td *matCellDef="let row" mat-cell style="white-space: pre-line"> {{row['evprotnr']}} </td>
+        </ng-container>
+        <!-- Column with status optional fields and set color -->
+        <ng-container matColumnDef="statmuss">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C6' | translate}} </th>
+          <td *matCellDef="let row" [style.background]="row['statmuss'] === 100 ? '#40BF72' : '#F44336'" [style.color]="'#ffffff'" mat-cell> {{row['statmuss']}}%
+          </td>
+        </ng-container>
+        <!-- Column with statusof SWISSREKA import and set color -->
+        <ng-container matColumnDef="statimport">
+          <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'overviewPage.table.C8' | translate}} </th>
+          <td *matCellDef="let row" [style.background]="row['statimportB'] === true ? '#40BF72' : '#F44336'" mat-cell style="color: #ffffff"> {{row['statimport']}} </td>
+        </ng-container>
+        <!-- Generate table -->
+        <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+      </table>
+    </div>
+    <!-- Table footer -->
+    <mat-paginator [pageSizeOptions]="[5,10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+  </mat-sidenav-content>
+</mat-sidenav-container>

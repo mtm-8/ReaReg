@@ -1,0 +1,23 @@
+<!-- Blue background -->
+<div class="blueBackground">
+  <!-- Centered card -->
+  <mat-card class="centerCard">
+    <!--Header image -->
+    <mat-card-header>
+      <img alt="logo" mat-card-sm-image src="assets/images/logo.png">
+    </mat-card-header>
+    <!-- Card Content -->
+    <mat-card-content>
+      <!-- Display errors depending on the user's login status. -->
+      <mat-progress-bar [value]="countdown" mode="determinate"></mat-progress-bar>
+      <h2>{{'pageNotFound.title' | translate}}</h2>
+      <p>{{ 'pageNotFound.contentAuth' | translate:{url: router.url} }}</p>
+      <!-- Return Button -->
+      <button (click)="authService.isAuthenticated() ? overview() : login()" color="primary" mat-raised-button>
+        <mat-icon>{{authService.isAuthenticated() ? 'dashboard' : 'login'}}</mat-icon>
+        {{authService.isAuthenticated() ? ''  : 'pageNotFound.button2' | translate}}
+        {{!authService.isAuthenticated() ? ''  : 'pageNotFound.button1' | translate}}
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

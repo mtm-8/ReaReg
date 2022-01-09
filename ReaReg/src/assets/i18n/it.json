@@ -1,0 +1,75 @@
+{
+   "evProtocol": {
+     "emergencyService": {
+       "title": "Numero Evento"
+     },
+    "ekg1": {
+      "title": "Ritmo cardiaco  Servizio di soccorso",
+      "option": {
+        "1800": "Fibrillazione ventricolare",
+        "1801": "Tachicardia ventricolare",
+        "1802": "DAE, Shock",
+        "1803": "DAE, no Shock",
+        "1804": "PEA",
+        "1805": "Asistolia",
+        "1806": "Bradicardia estrema",
+        "1807": "Ritmo sinusale <60/min (Età < 14 anni)",
+        "1808": "Sconosciuto"
+      }
+    },
+    "urkrstst": {
+      "title": "Eziologia arresto cardio-circolatorio",
+      "option": {
+        "1575": "Internistica",
+        "1576": "Traumatica",
+        "1577": "Intossicazione",
+        "1578": "Annegamento",
+        "1579": "Elettrocuzione",
+        "1580": "Asfissia"
+      }
+    },
+    "einsaort_cac": {
+      "title": "Luogo dell'intervento",
+      "option": {
+        "1565": "Abitazione",
+        "1566": "Casa anziani",
+        "1567": "Industria / Luogo di lavoro",
+        "1568": "Sport / Tempo libero",
+        "1569": "Strada / Luogo pubblico",
+        "1570": "Edificio pubblico",
+        "1571": "Scuola / Luogo di formazione",
+        "2079": "Studio medico",
+        "2741": "Altro istituto di cura",
+        "1572": "Altro",
+        "1573": "Sconosciuto"
+      }
+    },
+    "zckb": {
+      "title": "Arresto- cardio-circolatorio testimoniato",
+      "option": {
+        "2066": "Non testimoniato",
+        "2067": "Da astante",
+        "2068": "Da First Responder",
+        "2069": "Da servizio di soccorso",
+        "2070": "Sconosciuto"
+      }
+    },
+    "rosc": {
+      "title": "ROSC",
+      "option": {
+        "1613": "Si",
+        "1614": "No",
+        "1615": "Sconosciuto"
+      }
+    },
+    "autocpr": {
+      "title": "Massaggio cardiaco Servizio di soccorso",
+      "option": {
+        "1863": "Prevalentemente manuale",
+        "1864": "Prevalentemente meccanico",
+        "1865": "Sconosciuto"
+      }
+    },
+    "noMatch": "Nessuna corrispondenza possibile"
+  }
+}

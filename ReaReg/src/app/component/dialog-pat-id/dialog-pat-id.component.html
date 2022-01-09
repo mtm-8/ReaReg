@@ -1,0 +1,28 @@
+<!-- Title of dialog -->
+<h2 mat-dialog-title>{{"protocolDialog.title"| translate}}</h2>
+<!-- Dialog content -->
+<mat-dialog-content>
+  <form [formGroup]="patidForm">
+    <div class="div-protocol-flexBox">
+      <!-- Patid field with error messages -->
+      <mat-form-field>
+        <mat-label>{{"wvProtocol.patid.title" | translate}}</mat-label>
+        <input (keypress)="preventRegex($event,'^[0-9]{1,10}$')" formControlName="patid" matInput required type="text" maxlength="10">
+        <mat-error *ngIf="this.getPatId().hasError('required')">{{"error.required" | translate}}</mat-error>
+        <mat-error *ngIf="this.getPatId().hasError('pattern')">{{'error.validators.patid' | translate}}</mat-error>
+      </mat-form-field>
+      <div class="infoButton">
+        <button (click)="openInfoDialog('wvProtocol.patid.title' ,'wvProtocol.patid.descr')" color="primary" mat-fab type="button">i</button>
+      </div>
+    </div>
+  </form>
+</mat-dialog-content>
+<!-- Close and create button -->
+<mat-dialog-actions>
+  <button (click)="back()" [mat-dialog-close]="false" color="warn" mat-raised-button>
+    <mat-icon>close</mat-icon>
+    {{"message.cancel" | translate}}</button>
+  <button [disabled]=getPatId().invalid [mat-dialog-close]="getPatId().value" color="primary" mat-raised-button>{{"message.next" | translate}}
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</mat-dialog-actions>

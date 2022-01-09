@@ -1,0 +1,50 @@
+// Set form field size and position
+mat-form-field {
+  display: block !important;
+  width: 300px;
+  margin: 0 auto;
+}
+
+// Form prevent from floating
+form {
+  clear: both;
+}
+
+// Prevent from clicking on stepper header
+::ng-deep .mat-horizontal-stepper-header {
+  pointer-events: none !important;
+}
+
+// Set width and position and prevent floating
+iframe {
+  clear: both;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+// Change error position and width
+mat-error {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 12px;
+}
+
+// Set height of mat-stepper
+mat-step, mat-horizontal-stepper {
+  height: 100%;
+}
+
+// Set title position
+.title {
+  margin: 0 auto;
+  padding: 0;
+  text-align: center
+}
+
+// Set position of progressbar
+mat-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

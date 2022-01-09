@@ -1,0 +1,22 @@
+<!-- Blue background -->
+<div class="blueBackground">
+  <!-- Centered card -->
+  <mat-card class="centerCard">
+    <!-- Header image -->
+    <mat-card-header>
+      <img alt="logo" mat-card-sm-image src="assets/images/logo.png">
+    </mat-card-header>
+    <!-- Card Content -->
+    <mat-card-content>
+      <!-- Display of errors depending on user authorization -->
+      <mat-progress-bar [value]="countdown" mode="determinate"></mat-progress-bar>
+      <h2>{{'authorization.no-auth.title' | translate}}</h2>
+      <p>{{ 'authorization.no-auth.content' | translate}}</p>
+      <!-- Back Button -->
+      <button (click)="previous()" color="primary" mat-raised-button>
+        <mat-icon>arrow_back_ios</mat-icon>
+        {{ 'button.back' | translate}}
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>

@@ -1,0 +1,5 @@
+// On overflow do not allow scroll
+mat-sidenav-content {
+  overflow: unset;
+}
+

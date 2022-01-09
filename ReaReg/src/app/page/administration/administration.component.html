@@ -1,0 +1,225 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button and page title -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"administrationPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="1">
+      <!-- Title -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>admin_panel_settings</mat-icon>
+          {{'administrationPage.panelTitle3'|translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <form (submit)="changeManagement()" [formGroup]="managementForm" method="post">
+        <div class="div-admin-flexBox">
+          <!-- Set user creation type -->
+          <mat-form-field>
+            <mat-label>{{"administrationPage.userCreation.title" | translate}}</mat-label>
+            <mat-select formControlName="userCreation" required>
+              <mat-option value="1">{{"administrationPage.userCreation.1" | translate}}</mat-option>
+              <mat-option value="2">{{"administrationPage.userCreation.2" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <!-- User creation type infoButton -->
+          <div class="infoButton">
+            <button (click)="openDialog('administrationPage.userCreation.dialog.title' ,'administrationPage.userCreation.dialog.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Save button -->
+        <button class="submit" color="primary" mat-raised-button>
+          <mat-icon>save</mat-icon>
+          {{'userPage.buttonSave' | translate}}
+        </button>
+      </form>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="1">
+      <!-- Title -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>manage_accounts</mat-icon>
+          {{'administrationPage.panelTitle1'|translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Add Button -->
+      <button (click)="goToAddUserPage()" class="add-button" color="primary" mat-raised-button>
+        <mat-icon>add</mat-icon>
+        {{'administrationPage.new'| translate}}</button>
+      <div class="table-container">
+        <!-- Sortable table -->
+        <table [dataSource]="data" mat-table matSort matSortActive="datum" matSortDirection="desc">
+          <!-- Link to user column -->
+          <ng-container matColumnDef="action">
+            <th *matHeaderCellDef mat-header-cell></th>
+            <td *matCellDef="let row" mat-cell>
+              <a color="primary" href="/editUser;id={{row['userId']}}" mat-button>
+              <mat-icon>create</mat-icon>
+              {{"administrationPage.edit" | translate}}
+            </a>
+            </td>
+          </ng-container>
+          <!-- Username column -->
+          <ng-container matColumnDef="name">
+            <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'administrationPage.table.C1' | translate}} </th>
+            <td *matCellDef="let row" mat-cell> {{row["userName"] }} </td>
+          </ng-container>
+          <!-- Authorization column -->
+          <ng-container matColumnDef="authorization">
+            <th *matHeaderCellDef mat-header-cell mat-sort-header> {{'administrationPage.table.C2' | translate}} </th>
+            <td *matCellDef="let row" mat-cell> {{"authorization." + row["userAuthorization"] | translate}}  </td>
+          </ng-container>
+          <!-- Generate Table -->
+          <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+          <tr *matRowDef="let row; columns: displayedColumns;" mat-row></tr>
+        </table>
+        <!-- Table footer with paginator-->
+        <mat-paginator [pageSizeOptions]="[5,10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+      </div>
+    </mat-expansion-panel>
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="2">
+      <!-- Title -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>calculate</mat-icon>
+          {{'administrationPage.panelTitle2'|translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Form with measuring units -->
+      <form (submit)="changeMeasuringUnit()" [formGroup]="unitForm" method="post">
+        <!-- Co2aufn field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.co2aufn.title" | translate}}</mat-label>
+            <mat-select formControlName="co2aufn" required>
+              <mat-option value="1">{{"measuringUnit.1" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.2" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.co2aufn.title' ,'wvProtocol.co2aufn.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Hbaufn field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.hbaufn.title" | translate}}</mat-label>
+            <mat-select formControlName="hbaufn" required>
+              <mat-option value="1">{{"measuringUnit.6" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.7" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.hbaufn.title' ,'wvProtocol.hbaufn.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Lactaufn field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.lactaufn.title" | translate}}</mat-label>
+            <mat-select formControlName="lactaufn" required>
+              <mat-option value="1">{{"measuringUnit.3" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.4" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.lactaufn.title' ,'wvProtocol.lactaufn.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Bzaufn field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.bzaufn.title" | translate}}</mat-label>
+            <mat-select formControlName="bzaufn" required>
+              <mat-option value="1">{{"measuringUnit.3" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.4" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.bzaufn.title' ,'wvProtocol.bzaufn.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Kreaaufn field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.kreaaufn.title" | translate}}</mat-label>
+            <mat-select formControlName="kreaaufn" required>
+              <mat-option value="1">{{"measuringUnit.3" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.5" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.kreaaufn.title' ,'wvProtocol.kreaaufn.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Ecprlact field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.ecprlact.title" | translate}}</mat-label>
+            <mat-select formControlName="ecprlact" required>
+              <mat-option value="1">{{"measuringUnit.3" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.4" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.ecprlact.title' ,'wvProtocol.ecprlact.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Ecprpco2 field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.ecprpco2.title" | translate}}</mat-label>
+            <mat-select formControlName="ecprpco2" required>
+              <mat-option value="1">{{"measuringUnit.1" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.2" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.ecprpco2.title' ,'wvProtocol.ecprpco2.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Ecprpao2 field with info button -->
+        <div class="div-admin-flexBox">
+          <mat-form-field>
+            <mat-label>{{"wvProtocol.ecprpao2.title" | translate}}</mat-label>
+            <mat-select formControlName="ecprpao2" required>
+              <mat-option value="1">{{"measuringUnit.1" | translate}}</mat-option>
+              <mat-option value="2">{{"measuringUnit.2" | translate}}</mat-option>
+            </mat-select>
+            <mat-error>{{"administrationPage.error.required" | translate}}</mat-error>
+          </mat-form-field>
+          <div class="infoButton">
+            <button (click)="openDialog('wvProtocol.ecprpao2.title' ,'wvProtocol.ecprpao2.descr')" color="primary" mat-fab type="button">i</button>
+          </div>
+        </div>
+        <!-- Save button -->
+        <button class="submit" color="primary" mat-raised-button>
+          <mat-icon>save</mat-icon>
+          {{'userPage.buttonSave' | translate}}
+        </button>
+      </form>
+      <!-- Loading bar -->
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    </mat-expansion-panel>
+  </mat-sidenav-content>
+</mat-sidenav-container>

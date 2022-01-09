@@ -1,0 +1,23 @@
+// Set position of menu title
+h2 {
+  text-align: center;
+  margin-top: 10px;
+}
+
+// Set position of navigation text
+span {
+  margin-left: 5px;
+}
+
+// Set position of image
+img {
+  width: 150px;
+  position: absolute;
+  bottom: 25px;
+  left: 50px;
+}
+
+// Set background of active-links
+.active-link {
+  background-color: #bbc6d8;
+}

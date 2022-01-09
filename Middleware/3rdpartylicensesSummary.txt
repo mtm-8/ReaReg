@@ -1,0 +1,9 @@
+├─ MIT: 115
+├─ ISC: 37
+├─ BSD-3-Clause: 3
+├─ Unlicense: 3
+├─ Apache-2.0: 2
+├─ Custom: https://github.com/douglascrockford/JSON-js: 1
+├─ GPL-3.0-or-later: 1
+├─ Apache*: 1
+└─ MIT*: 1

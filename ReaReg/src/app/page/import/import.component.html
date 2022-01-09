@@ -1,0 +1,193 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <!-- Menu button and page title -->
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"importPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Content check if user is authorized -->
+    <div *ngIf="authorization >= 2">
+      <mat-horizontal-stepper #stepper [linear]="true">
+        <mat-step [stepControl]="importForm">
+          <!-- Form for CSV data and language -->
+          <form [formGroup]="importForm">
+            <ng-template matStepLabel>{{"importPage.stepper.firstStep.title" | translate}}</ng-template>
+            <div>
+              <!-- Button navigate next step -->
+              <button [disabled]="!importForm.valid" class="next" color="primary" mat-raised-button matStepperNext>
+                {{"button.next" | translate}}
+                <mat-icon>navigate_next</mat-icon>
+              </button>
+            </div>
+            <div class="importPreparation">
+              <!-- Title of first substep -->
+              <h4>{{"importPage.stepper.firstStep.subStep.1" | translate}}</h4>
+              <!-- File upload input field -->
+              <input #fileImportInput (change)="fileChangeListener($event)" accept=".csv" formControlName="csvFile" name="File Upload" style="display: none" type="file"/>
+              <!-- Button upload file -->
+              <button (click)="fileImportInput.click()" mat-raised-button>
+                <mat-icon>description</mat-icon>
+                {{"importPage.stepper.firstStep.csv-button" | translate}}
+              </button>
+              <mat-divider></mat-divider>
+              <!-- Container on completion of substep one show substep two -->
+              <div>
+                <!-- Title of second substep -->
+                <h4>{{"importPage.stepper.firstStep.subStep.2" | translate}}</h4>
+                <!-- Form field language -->
+                <mat-form-field>
+                  <mat-label>{{"importPage.stepper.firstStep.language" | translate}}</mat-label>
+                  <mat-select (selectionChange)="onChange()" [(value)]="selected" formControlName="language">
+                    <mat-option value="de">{{"language.1" | translate}}</mat-option>
+                    <mat-option value="fr">{{"language.3" | translate}}</mat-option>
+                    <mat-option value="it">{{"language.4" | translate}}</mat-option>
+                  </mat-select>
+                </mat-form-field>
+              </div>
+              <mat-divider></mat-divider>
+              <!-- Container on completion of substep two show substep three -->
+              <div *ngIf="importForm.controls['csvFile'].valid && importForm.controls.language.valid">
+                <!-- Title of third Substep -->
+                <h4>{{"importPage.stepper.firstStep.subStep.3" | translate}}</h4>
+                <!-- Button parse csv file -->
+                <button (click)="importCsv()" color="primary" mat-raised-button>
+                  <mat-icon>check</mat-icon>
+                  {{"importPage.stepper.firstStep.submit-button" | translate}}
+                </button>
+                <!-- Show progress bar while loading -->
+                <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <!-- Mat-step two -->
+        <mat-step [stepControl]="tableForm">
+          <ng-template matStepLabel>{{"importPage.stepper.secondStep.title" | translate}}</ng-template>
+          <form>
+            <!-- Button navigate before -->
+            <button class="back" color="primary" mat-raised-button matStepperPrevious>
+              <mat-icon>navigate_before</mat-icon>
+              {{"button.back" | translate}}
+            </button>
+            <!-- Button navigate next step -->
+            <button (click)="transferSelection(stepper)" [disabled]="selection.isEmpty()" class="next" color="primary" mat-raised-button matStepperNext>
+              {{"button.import" | translate}}
+              <mat-icon>navigate_next</mat-icon>
+            </button>
+            <div class="table-container">
+              <table [dataSource]="tableSource" class="mat-elevation-z8" mat-table matSort>
+                <!-- Column Checkbox -->
+                <ng-container matColumnDef="select">
+                  <th *matHeaderCellDef mat-header-cell>
+                    <mat-checkbox (change)="$event ? masterToggle() : null; updateForm()" [checked]="selection.hasValue() && isAllSelected()" [indeterminate]="selection.hasValue() && !isAllSelected()" color="primary"></mat-checkbox>
+                  </th>
+                  <td (click)="preventClick($event,row['imported'])" *matCellDef="let row" mat-cell>
+                    <mat-checkbox (change)="$event ? selection.toggle(row) : null; updateForm()" (click)="$event.stopPropagation()" [checked]="selection.isSelected(row)" [disabled]="row['imported'] ===translate.instant('message.doesNotExist')" color="primary"></mat-checkbox>
+                  </td>
+                </ng-container>
+                <!-- Column protnr -->
+                <ng-container matColumnDef="protnr">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.protnr.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],'id-->id')" mat-cell> {{element['protnr']}} </td>
+                </ng-container>
+                <!-- Column ekg1 -->
+                <ng-container matColumnDef="ekg1">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.ekg1.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['ekg1'])" mat-cell> {{element['ekg1']}} </td>
+                </ng-container>
+                <!-- Column urkrstst -->
+                <ng-container matColumnDef="urkrstst">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.urkrstst.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['urkrstst'])" mat-cell> {{element['urkrstst']}} </td>
+                </ng-container>
+                <!-- Column einsaort_cac -->
+                <ng-container matColumnDef="einsaort_cac">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.einsaort_cac.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['einsaort_cac'])" mat-cell> {{element['einsaort_cac']}} </td>
+                </ng-container>
+                <!-- Column zckb -->
+                <ng-container matColumnDef="zckb">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.zckb.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['zckb'])" mat-cell> {{element['zckb']}} </td>
+                </ng-container>
+                <!-- Column rosc -->
+                <ng-container matColumnDef="rosc">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.rosc.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['rosc'])" mat-cell> {{element['rosc']}} </td>
+                </ng-container>
+                <!-- Column autocpr -->
+                <ng-container matColumnDef="autocpr">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"wvProtocol.autocpr.title" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'],element['autocpr'])" mat-cell> {{element['autocpr']}} </td>
+                </ng-container>
+                <!-- Column alreadyImported -->
+                <ng-container matColumnDef="imported">
+                  <th *matHeaderCellDef mat-header-cell mat-sort-header>{{"importPage.stepper.secondStep.imported" | translate}}</th>
+                  <td (click)="preventClick($event,element['imported'])" *matCellDef="let element" [ngClass]="getStyleClass(element['imported'])" mat-cell> {{element['imported']}} </td>
+                </ng-container>
+                <tr *matHeaderRowDef="displayedColumns" mat-header-row></tr>
+                <tr (click)="selection.toggle(row)" *matRowDef="let row; columns: displayedColumns;" mat-row>
+              </table>
+              <!-- Table footer with paginator -->
+              <mat-paginator [pageSizeOptions]="[5, 10, 20, 50, 100]" showFirstLastButtons></mat-paginator>
+            </div>
+            <!-- Table color legend -->
+            <div class="legend">
+              <b>{{'importPage.stepper.secondStep.legend.title' | translate}}</b>
+              <div class="legendElement">
+                <div class="legendColor itemBlue"></div>
+                <span>{{'importPage.stepper.secondStep.legend.blue' | translate}}</span>
+              </div>
+              <div class="legendElement">
+                <div class="legendColor itemOrange"></div>
+                <span>{{'importPage.stepper.secondStep.legend.orange' | translate}}</span>
+              </div>
+              <div class="legendElement">
+                <div class="legendColor itemRed"></div>
+                <span>{{'importPage.stepper.secondStep.legend.red' | translate}}</span>
+              </div>
+              <div class="legendElement">
+                <div class="legendColor itemGray"></div>
+                <span>{{'importPage.stepper.secondStep.legend.gray' | translate}}</span>
+              </div>
+            </div>
+          </form>
+        </mat-step>
+        <!-- Mat-step three -->
+        <mat-step>
+          <ng-template matStepLabel>{{"importPage.stepper.thirdStep.title" | translate}}</ng-template>
+          <div>
+            <!-- Button reset stepper -->
+            <button (click)="stepper.reset(); importForm['reset']({language: selected});" class="btn-reset" color="primary" mat-raised-button>
+              <mat-icon>undo</mat-icon>
+              {{"importPage.stepper.thirdStep.reset" | translate}}
+            </button>
+            <!-- Button go to overview -->
+            <button (click)="goToOverview()" class="btn-overview" color="primary" mat-raised-button>
+              <mat-icon>dashboard</mat-icon>
+              {{ "button.overview" | translate }}
+            </button>
+          </div>
+          <div *ngIf="importStatus" class="result">
+            <!-- Import summary -->
+            <p>{{"importPage.stepper.thirdStep.success"| translate}}</p>
+            <ul>
+              <li *ngFor="let el of selectionForExport">{{el}}</li>
+            </ul>
+          </div>
+        </mat-step>
+      </mat-horizontal-stepper>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

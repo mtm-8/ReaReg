@@ -1,0 +1,52 @@
+<mat-card class="filter">
+  <mat-card-title>{{'filter.title' | translate}}</mat-card-title>
+  <!-- Reset button -->
+  <button (click)="reset()" class="reset" mat-button>{{'filter.reset' | translate}}</button>
+  <form [formGroup]="filterForm">
+    <div>
+      <div>
+        <!-- Filter input fields -->
+        <!-- Dropdown -->
+        <mat-form-field>
+          <mat-label>{{'filter.phDateName' | translate}}</mat-label>
+          <mat-select (selectionChange)="submit()" formControlName="dateName" name="dateName">
+            <mat-option value="1">
+              {{'filter.DateName1' | translate}}
+            </mat-option>
+            <mat-option value="2">
+              {{'filter.DateName2' | translate}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        <!-- Datepickers -->
+        <mat-form-field color="primary">
+          <mat-label>{{'filter.from' | translate}}</mat-label>
+          <input (click)="pickerFromDate.open()" (dateChange)="submit()" formControlName="dateFrom" [matDatepicker]="pickerFromDate" matInput name="dateFrom">
+          <mat-datepicker-toggle [for]="pickerFromDate" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #pickerFromDate></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field color="primary">
+          <mat-label>{{'filter.to' | translate}}</mat-label>
+          <input (click)="pickerToDate.open()" (dateChange)="submit()" formControlName="dateTo" [matDatepicker]="pickerToDate" matInput name="dateFrom">
+          <mat-datepicker-toggle [for]="pickerToDate" matSuffix></mat-datepicker-toggle>
+          <mat-datepicker #pickerToDate></mat-datepicker>
+        </mat-form-field>
+        <mat-error *ngIf="dateVal">
+          {{'filter.error' | translate}}
+        </mat-error>
+      </div>
+      <div>
+        <!-- Search field -->
+        <mat-form-field>
+          <mat-label>{{'filter.phSearch' | translate}}</mat-label>
+          <input (keyup)="submit()" formControlName="search" matInput name="search" type="text">
+        </mat-form-field>
+      </div>
+      <div>
+        <!-- Checkboxes -->
+        <mat-checkbox (change)="submit()" formControlName="ch1" color="primary" name="ch1">{{'filter.cb1' | translate}}</mat-checkbox>
+        <mat-checkbox (change)="submit()" formControlName="ch2" color="primary" name="ch2">{{'filter.cb2' | translate}}</mat-checkbox>
+      </div>
+    </div>
+  </form>
+</mat-card>

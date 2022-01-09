@@ -1,0 +1,25 @@
+// Set form field size and position
+mat-form-field {
+  display: block !important;
+  width: 300px;
+  margin: 0 auto;
+}
+
+// Prevent floating
+form {
+  clear: both;
+}
+
+// Change error position and width
+mat-error {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 12px;
+}
+
+// Set position of progressbar
+mat-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

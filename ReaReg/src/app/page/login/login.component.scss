@@ -1,0 +1,27 @@
+// Set progressbar position
+mat-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// Set form field size and position
+mat-form-field {
+  display: block !important;
+  width: 300px;
+  margin: 0 auto;
+}
+
+// Set position of languages
+.loginLanguage {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+}
+
+// Set color of language links
+.loginLanguage a {
+  margin-right: 10px;
+  cursor: pointer;
+  color: #003064;
+}

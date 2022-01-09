@@ -1,0 +1,22 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button and page title -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"exportPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Iframe with REDCap export link-->
+    <iframe *ngIf="authService.isAuthorizedLvl2()" [src]="redcapURLExport"></iframe>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,56 @@
+// Form position and width
+form {
+  display: block;
+  margin: 0 auto;
+  width: 400px;
+}
+
+// Change error position and width
+mat-error {
+  margin: 0 auto;
+  width: 300px;
+  font-size: 12px;
+}
+
+// Set position of progressbar
+mat-progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// Set form field size and position
+mat-form-field {
+  width: 100%;
+}
+
+// Set Table width and position
+table {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// Set width and position of paginator
+mat-paginator {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+// Set row in admin form
+.div-admin-flexBox {
+  display: flex;
+  margin: 15px 20px;
+}
+
+// Set info size and position of infoButton
+.infoButton button {
+  margin-left: 20px;
+  position: relative;
+  top: 13px;
+  height: 25px !important;
+  width: 25px !important;
+  font-size: 16px !important;
+  line-height: 0 !important;
+}
+
+

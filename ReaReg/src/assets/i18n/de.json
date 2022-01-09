@@ -1,0 +1,1903 @@
+{
+  "protocolDialog": {
+    "title": "Protokoll hinzufügen"
+  },
+  "administrationPage": {
+    "edit": "Bearbeiten",
+    "error": {
+      "required": "Dieses Feld ist ein Pflichtfeld."
+    },
+    "userCreation": {
+      "title": "Art der Benutzererstellung",
+      "1": "REDCap Administrationsrechte vorhanden",
+      "2": "REDCap wird fremdbetreut",
+      "dialog": {
+        "title": "Art der Benutzererstellung",
+        "descr": "Sind Sie im Besitz eines Benutzers, welcher es erlaubt, auf einer REDCap Instanz Benutzer anzulegen, dann sind \"REDCap Administrationsrechte vorhanden\". Haben Sie keinen Zugang dazu, \"wird REDCap fremdbetreut\"."
+      },
+      "required": "Dieses Feld ist ein Pflichtfeld.",
+      "wrong": "Unerwartete Werte"
+    },
+    "new": "Neu",
+    "panelTitle1": "Benutzerverwaltung",
+    "panelTitle2": "Masseinheiten",
+    "panelTitle3": "Verwaltung",
+    "success": {
+      "units": "Masseinheiten geändert",
+      "management": "Verwaltung geändert"
+    },
+    "table": {
+      "C1": "Benutzername",
+      "C2": "Berechtigung"
+    },
+    "title": "Administration",
+    "user": {
+      "add": {
+        "create": "Benutzer erstellen",
+        "authorization": "Berechtigung",
+        "error": {
+          "token": "Der Token entspricht nicht einem REDCap API-Token.",
+          "username1": "Benutzername ist zu kurz.",
+          "username2": "Benutzername ist zu lang.",
+          "username3": "Benutzername existiert bereits."
+        },
+        "stepper1": "Benutzerdaten",
+        "stepper2": "REDCap Benutzer erstellen",
+        "stepper3": "REDCap Benutzer dem Projekt zuordnen",
+        "stepper4": "REDCap API-Token erstellen und kopieren",
+        "stepper5": "API-Token",
+        "success": "Benutzer erfolgreich erstellt.",
+        "title": "Benutzer erstellen"
+      },
+      "edit": {
+        "confirmTitle": "Möchten Sie den Benutzer {{username}} wirklich löschen?",
+        "success": {
+          "changed": "Benutzer {{username}} wurde erfolgreich bearbeitet.",
+          "deleted": "Benutzer {{username}} wurde erfolgreich gelöscht."
+        },
+        "title": "Benutzer bearbeiten"
+      }
+    }
+  },
+  "authorization": {
+    "1": "Datenerfasser/-in",
+    "2": "Datenverwalter/-in",
+    "3": "Administrator/-in",
+    "no-auth": {
+      "title": "Fehler - 401",
+      "content": "Sie haben keinen Zugriff auf diese Seite und werden deshalb in Kürze zurückgeleitet."
+    }
+  },
+  "button": {
+    "back": "Zurück",
+    "import": "Importieren",
+    "next": "Weiter",
+    "save": "Speichern",
+    "today": "Heute",
+    "now": "Jetzt",
+    "understood": "Verstanden",
+    "insert_datum": "Einsatzdatum",
+    "saveAndBack": "Speichern und zurück",
+    "overview": "Zur Protokollübersicht"
+  },
+  "error": {
+    "error": "Fehler",
+    "required": "Dieses Feld ist ein Pflichtfeld.",
+    "validators": {
+      "datum_dateSmallerOrEqualToToday": "Das Einsatzdatum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "datum_dateGreaterThanValidator": "Das Aufnahmedatum {{var1}} ist kleiner als das Einsatzdatum {{var2}}.",
+      "ekgaufn_min": "Bitte wählen Sie mindestens eine Option aus.",
+      "ecprkompl_min": "Bitte wählen Sie mindestens eine Option aus.",
+      "komplsek_min": "Bitte wählen Sie mindestens eine Option aus.",
+      "instab_min": "Bitte wählen Sie mindestens eine Option aus.",
+      "gebdat": "Das Geburtsdatum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "patid": "Die Patientenidentifikation darf maximal 10 Ziffern haben und muss aus folgenden Zahlen [0-9] bestehen.",
+      "protnr_length": "Die Protokollnummer darf maximal 20 Ziffern haben und aus folgenden Zahlen [0-9] und dem Sonderzeichen [-] bestehen.",
+      "protnr_exist": "Die Protokollnummer existiert bereits in einem anderen Protokoll. ACHTUNG Protokollnummer wird nicht gespeichert.",
+      "adrena_min": "Die Gabe von {{var1}} mg Suprarenin ist kleiner als der Minimalwert von 0.01 mg.",
+      "adrena_max": "Die Gabe von {{var1}} mg Suprarenin ist grösser als der Maximalwert von 99.80 mg.",
+      "amioda_min": "Die Gabe von {{var1}} mg Amiodaron ist kleiner als der Minimalwert von 1 mg.",
+      "amioda_max": "Die Gabe von {{var1}} mg Amiodaron ist grösser als der Maximalwert von 998 mg.",
+      "rraufn_min": "Die systolische Blutdruck von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 0 mmHg",
+      "rraufn_max": "Der systolische Blutdruck von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 300 mmHg",
+      "rrdaufn_min": "Der diastolische Blutdruck von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 0 mmHg.",
+      "rrdaufn_max": "Der diastolische Blutdruck von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 300 mmHg.",
+      "hfaufn_min": "Die Herzfrequenz von {{var1}} /min igest kleiner als der erlaubte Minimalwert von 0 /min.",
+      "hfaufn_max": "Die Herzfrequenz von {{var1}} /min ist grösser als der erlaubte Maximalwert von 300 /min.",
+      "afaufn_min": "Die Atemfrequenz von {{var1}} /min ist kleiner als der erlaubte Minimalwert von 0 /min.",
+      "afaufn_max": "Die Atemfrequenz von {{var1}} /min ist grösser als der erlaubte Maximalwert von 50 /min.",
+      "o2saufn_min": "Die Sauerstoffsättigung von {{var1}} % ist kleiner als der erlaubte Minimalwert von 0 %.",
+      "o2saufn_max": "Die Sauerstoffsättigung von {{var1}} % ist grösser als der erlaubte Maximalwert von 100 %.",
+      "co2aufn_mmhg_min": "Der endexspiratorischer CO2 Wert von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 0.000 mmHg.",
+      "co2aufn_mmhg_max": "Der endexspiratorischer CO2 Wert von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 80.002 mmHg.",
+      "co2aufn_kpa_min": "Der endexspiratorischer CO2 Wert von {{var1}} kPa ist kleiner als der erlaubte Minimalwert von 0.000 kPa.",
+      "co2aufn_kpa_max": "Der endexspiratorischer CO2 Wert von {{var1}} kPa ist grösser als der erlaubte Maximalwert von 10.666 kPa.",
+      "tempaufn_min": "Die Körpertemperatur von {{var1}} °C ist kleiner als der erlaubte Minimalwert von 20.0 °C.",
+      "tempaufn_max": "Die Körpertemperatur von {{var1}} °C ist grösser als der erlaubte Maximalwert von 40.0 °C.",
+      "hbaufn_gdl_min": "Der Hb-Wert von {{var1}} g/dl ist kleiner als der erlaubte Minimalwert von 0.0 g/dl.",
+      "hbaufn_gdl_max": "Der Hb-Wert von {{var1}} g/dl ist grösser als der erlaubte Maximalwert von 20.0 g/dl.",
+      "hbaufn_gl_min": "Der Hb-Wert von {{var1}} g/l ist kleiner als der erlaubte Minimalwert von 0 g/l.",
+      "hbaufn_gl_max": "Der Hb-Wert von {{var1}} g/l ist grösser als der erlaubte Maximalwert von 200 g/l.",
+      "phaufn_min": "Der pH-Wert von {{var1}} ist kleiner als der erlaubte Minimalwert von 6.0.",
+      "phaufn_max": "Der pH-Wert von {{var1}} ist grösser als der erlaubte Maximalwert von 8.0.",
+      "beaufn_min": "Der BE-Wert von {{var1}} mmol/l ist kleiner als der erlaubte Minimalwert von -40.0 mmol/l.",
+      "beaufn_max": "Der BE-Wert von {{var1}} mmol/l ist grösser als der erlaubte Maximalwert von 30.0 mmol/l.",
+      "pco2aufn_min": "Der pCO2-Wert von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 3.8 mmHg.",
+      "pco2aufn_max": "Der pCO2-Wert von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 300.0 mmHg.",
+      "lactaufn_mgdl_min": "Der Lactat-Wert von {{var1}} mg/dl ist kleiner als der erlaubte Minimalwert von 0.90 mg/dl.",
+      "lactaufn_mgdl_max": "Der Lactat-Wert von {{var1}} mg/dl ist grösser als der erlaubte Maximalwert von 270.03 mg/dl.",
+      "lactaufn_mmol_min": "Der Lactat-Wert von {{var1}} mmol/l ist kleiner als der erlaubte Minimalwert von 0.10 mmol/l.",
+      "lactaufn_mmol_max": "Der Lactat-Wert von {{var1}} mmol/l ist grösser als der erlaubte Maximalwert von 29.97 mmol/l.",
+      "bzaufn_mgdl_min": "Der Blutzucker-Wert von {{var1}} mg/dl ist kleiner als der erlaubte Minimalwert von 0 mg/dl.",
+      "bzaufn_mgdl_max": "Der Blutzucker-Wert von {{var1}} mg/dl ist grösser als der erlaubte Maximalwert von 600 mg/dl.",
+      "bzaufn_mmoll_min": "Der Blutzucker-Wert von {{var1}} mmol/l ist kleiner als der erlaubte Minimalwert von 0.0 mmol/l.",
+      "bzaufn_mmoll_max": "Der Blutzucker-Wert von {{var1}} mmol/l ist grösser als der erlaubte Maximalwert von 33.3 mmol/l.",
+      "kreaaufn_mgdl_min": "Der Kreatinin-Wert von {{var1}} mg/dl ist kleiner als der erlaubte Minimalwert von 0.200 mg/dl.",
+      "kreaaufn_mgdl_max": "Der Kreatinin-Wert von {{var1}} mg/dl ist grösser als der erlaubte Maximalwert von 5.700 mg/dl.",
+      "kreaaufn_μmoll_min": "Der Kreatinin-Wert von {{var1}} μmol/l ist kleiner als der erlaubte Minimalwert von 17.7 μmol/l.",
+      "kreaaufn_μmoll_max": "Der Kreatinin-Wert von {{var1}} μmol/l ist grösser als der erlaubte Maximalwert von 503.9 μmol/l.",
+      "troponw_min": "Der obere Normalwert Troponin von {{var1}} µg/l ist kleiner als der erlaubte Minimalwert von 0.001 µg/l.",
+      "troponw_max": "Der obere Normalwert Troponin von {{var1}} µg/l ist grösser als der erlaubte Maximalwert von 0.4 µg/l.",
+      "tropaaufn_min": "Der absolute Troponin-Wert von {{var1}} ng/l ist kleiner als der erlaubte Minimalwert von 0.01 ng/l.",
+      "tropaaufn_max": "Der absolute Troponin-Wert von {{var1}} ng/l ist grösser als der erlaubte Maximalwert von 9999999.99 ng/l.",
+      "tropaufn_min": "Der Troponin-Wert von {{var1}} ist kleiner als der erlaubte Minimalwert von 0.",
+      "tropaufn_max": "Der Troponin-Wert von {{var1}} ist grösser als der erlaubte Maximalwert von 500.",
+      "trop2aaufn_min": "Der 2. Troponin-Wert (<12h nach erster Abnahme) von {{var1}} ng/l ist kleiner als der erlaubte Minimalwert von 0.01 ng/l.",
+      "trop2aaufn_max": "Der 2. Troponin-Wert (<12h nach erster Abnahme) von {{var1}} ng/l ist grösser als der erlaubte Maximalwert von 9999999.99 ng/l.",
+      "trop2aufn_min": "Der 2. Troponin-Wert (<12h nach erster Abnahme) von {{var1}} ist kleiner als der erlaubte Minimalwert von 0.",
+      "trop2aufn_max": "Der 2. Troponin-Wert (<12h nach erster Abnahme) von {{var1}} ist grösser als der erlaubte Maximalwert von 500.",
+      "bnpaufn_min": "Der 1. gemessenes BNP von {{var1}} pg/ml ist kleiner als der erlaubte Minimalwert von 0 pg/ml.",
+      "bnpaufn_max": "Der 1. gemessenes BNP von {{var1}} pg/ml ist grösser als der erlaubte Maximalwert von 99998 pg/ml.",
+      "rrziel3_min": "Der arterielle Mitteldruck von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 30.0 mmHg.",
+      "rrziel3_max": "Der arterielle Mitteldruck von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 120.0 mmHg.",
+      "dekg12_dateSmallerOrEqualToToday": "Das 12-Kanal-EKG Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dekg12_dateGreaterThanValidator": "Das 12-Kanal-EKG Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zekg12_timeGreaterThanValidator": "Die 12-Kanal-EKG - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "dct_dateSmallerOrEqualToToday": "Das CT Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dct_dateGreaterThanValidator": "Das CT Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zct_timeGreaterThanValidator": "Die CT - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "dcoro_dateSmallerOrEqualToToday": "Das Koronarangiographie Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dcoro_dateGreaterThanValidator": "Das Koronarangiographie Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zcoro_timeGreaterThanValidator": "Die Koronarangiographie - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "decls_dateSmallerOrEqualToToday": "Das ECLS Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "decls_dateGreaterThanValidator": "Das ECLS Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zecls_timeGreaterThanValidator": "Die ECLS - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "diabp_dateSmallerOrEqualToToday": "Das IABP Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "diabp_dateGreaterThanValidator": "Das IABP Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "ziabp_timeGreaterThanValidator": "Die IABP - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "dimpella_dateSmallerOrEqualToToday": "Das Impella Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dimpella_dateGreaterThanValidator": "Das Impella Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zimpella_timeGreaterThanValidator": "Die IABP - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "dlyse_dateSmallerOrEqualToToday": "Das Lyse Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dlyse_dateGreaterThanValidator": "Das Lyse Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zlyse_timeGreaterThanValidator": "Die Lyse - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "ecprdbk_dateSmallerOrEqualToToday": "Das Datum Beginn Kanülierung {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "ecprdbk_dateGreaterThanValidator": "Das Datum Beginn Kanülierung {{var1}} ist kleiner als das Einsatzdatum {{var2}}.",
+      "ecprzbk_timeGreaterThanValidator": "Der Zeitpunkt Beginn Kanülierung {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "ecprdst_dateSmallerOrEqualToToday": "Das Datum eCPR Start {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "ecprdst_dateGreaterThanValidator": "Das Datum eCPR Start {{var1}} ist kleiner als das Datum des Beginns der Kanülierung {{var2}}.",
+      "ecprzst_timeGreaterThanValidator": "Der Zeitpunkt eCPR Start {{var1}} Uhr ist kleiner als die Zeit des Beginns der Kanülierung {{var2}} Uhr.",
+      "ecprdend_dateSmallerOrEqualToToday": "Das Datum Beendigung eCPR {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "ecprdend_dateGreaterThanValidator": "Das Datum Beendigung eCPR {{var1}} ist kleiner als das Datum des eCPR Starts {{var2}}.",
+      "ecprzend_timeGreaterThanValidator": "Der Zeitpunkt Beendigung eCPR {{var1}} Uhr ist kleiner als die Zeit des eCPR Starts {{var2}} Uhr.",
+      "dkuehlbeg_dateSmallerOrEqualToToday": "Das Beginn Temperaturmanagement Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dkuehlbeg_dateGreaterThanValidator": "Das Beginn Temperaturmanagement Datum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "zkuehlbeg_timeGreaterThanValidator": "Die Beginn Temperaturmanagement - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "dzieltemp_dateSmallerOrEqualToToday": "Das Zieltemperatur erreicht Datum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dzieltemp_dateGreaterThanValidator": "Das Zieltemperatur erreicht Datum {{var1}} ist kleiner als das Beginn Temperaturmanagement Datum {{var2}}.",
+      "zzieltemp_timeGreaterThanValidator": "Die Zieltemperatur erreicht - Uhrzeit {{var1}} Uhr ist kleiner als die Zeit der Aufnahme {{var2}} Uhr.",
+      "entldat_dateSmallerOrEqualToToday": "Das Entlassungsdatum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "entldat_dateGreaterThanValidator": "Das Entlassungsdatum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "vdatum_dateSmallerOrEqualToToday": "Das Datum der Weiterverlegung {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "vdatum_dateGreaterThanValidator": "Das Datum der Weiterverlegung {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "dtod_dateSmallerOrEqualToToday": "Das Todesdatum {{var1}} ist grösser als das heutige Datum {{var2}}.",
+      "dtod_dateGreaterThanValidator": "Das Todesdatum {{var1}} ist kleiner als das Aufnahmedatum {{var2}}.",
+      "ecprlact_mgdl_min": "Der Lactatwert von {{var1}} mg/dl ist kleiner als der erlaubte Minimalwert von 0.90 mg/dl.",
+      "ecprlact_mgdl_max": "Der Lactatwert von {{var1}} mg/dl ist grösser als der erlaubte Maximalwert von 270.03 mg/dl.",
+      "ecprlact_mmoll_min": "Der Lactatwert von {{var1}} mmol/l ist kleiner als der erlaubte Minimalwert von 0.10 mmol/l.",
+      "ecprlact_mmoll_max": "Der Lactatwert von {{var1}} mmol/l ist grösser als der erlaubte Maximalwert von 29.97 mmol/l.",
+      "ecprph_min": "Der pH-Wert von {{var1}} ist kleiner als der erlaubte Minimalwert von 6.0.",
+      "ecprph_max": "Der pH-Wert von {{var1}} ist grösser als der erlaubte Maximalwert von 8.0.",
+      "ecprbe_min": "Der pH-Wert von {{var1}} ist kleiner als der erlaubte Minimalwert von -40.0.",
+      "ecprbe_max": "Der pH-Wert von {{var1}} ist grösser als der erlaubte Maximalwert von 30.0.",
+      "ecprpco2_mmhg_min": "Der pCO2-Wert von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 3.803 mmHg.",
+      "ecprpco2_mmhg_max": "Der pCO2-Wert von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 300.003 mmHg.",
+      "ecprpco2_kpa_min": "Der pCO2-Wert von {{var1}} kPa ist kleiner als der erlaubte Minimalwert von 0.507 kPa.",
+      "ecprpco2_kpa_max": "Der pCO2-Wert von {{var1}} kPa ist grösser als der erlaubte Maximalwert von 39.997 kPa.",
+      "ecprpao2_mmhg_min": "Der paO2-Wert von {{var1}} mmHg ist kleiner als der erlaubte Minimalwert von 0.000 mmHg.",
+      "ecprpao2_mmhg_max": "Der paO2-Wert von {{var1}} mmHg ist grösser als der erlaubte Maximalwert von 500.000 mmHg.",
+      "ecprpao2_kpa_min": "Der paO2-Wert von {{var1}} kPa ist kleiner als der erlaubte Minimalwert von 0.000 kPa.",
+      "ecprpao2_kpa_max": "Der paO2-Wert von {{var1}} kPa ist grösser als der erlaubte Maximalwert von 66.661 kPa.",
+      "icutage_min": "Die Anzahl der Intensivstations-Behandlungstage von {{var1}} ist kleiner als der erlaubte Minimalwert von 0.",
+      "icutage_max": "Die Anzahl der Intensivstations-Behandlungstage von {{var1}} ist grösser als der erlaubte Maximalwert von 997.",
+      "icutage_max_leb24h": "Die Anzahl der Intensivstations-Behandlungstage von {{var1}} ist grösser als der erlaubte Maximalwert von 2.",
+      "beatstd_min": "Die Gesamtsumme der Beatmungsstunden mit invasiver Beatmung von {{var1}} ist kleiner als der erlaubte Minimalwert von 0.",
+      "beatstd_max": "Die Gesamtsumme der Beatmungsstunden mit invasiver Beatmung von {{var1}} ist grösser als der erlaubte Maximalwert von 997.",
+      "beatstd_max_leb24h": "Die Gesamtsumme der Beatmungsstunden mit invasiver Beatmung von {{var1}} ist grösser als der erlaubte Maximalwert von 25.",
+      "eq5d_min": "Der EQ-5D Rohwert von {{var1}} ist kleiner als der erlaubte Minimalwert von 11111.",
+      "eq5d_max": "Der EQ-5D Rohwert von {{var1}} ist grösser als der erlaubte Maximalwert von 55555.",
+      "sf12_min": "Das Ergebnis des SF-12 von {{var1}} ist kleiner als der erlaubte Minimalwert von 0.",
+      "sf12_max": "Das Ergebnis des SF-12 von {{var1}} ist grösser als der erlaubte Maximalwert von 100."
+    }
+  },
+  "hint": {
+    "auto": "Wird bei Auswahl der Zielklinik automatisch ausgefüllt."
+  },
+  "evProtocol": {
+    "emergencyService": {
+      "title": "Einsatznummer"
+    },
+    "ekg1": {
+      "title": "Herzrhythmus Rettungsdienst",
+      "option": {
+        "1800": "Kammerflimmern",
+        "1801": "Kammertachykardie",
+        "1802": "AED Shock abgegeben",
+        "1803": "AED Shock nicht abgegeben",
+        "1804": "Pulslose Elektrische Aktivität",
+        "1805": "Asystolie",
+        "1806": "Extreme Bradykardie",
+        "1807": "Sinusrhythmus < 60/min (Alter < 14 Jhr.)",
+        "1808": "Unbekannt"
+      }
+    },
+    "urkrstst": {
+      "title": "Ursache",
+      "option": {
+        "1575": "Medizinisch",
+        "1576": "Traumatisch",
+        "1577": "Intoxikation",
+        "1578": "Ertrinkung",
+        "1579": "Stromschlag",
+        "1580": "Erstickung (externe Ursache)"
+      }
+    },
+    "einsaort_cac": {
+      "title": "Einsatzort",
+      "option": {
+        "1565": "Wohnung",
+        "1566": "Altersheim",
+        "1567": "Industrie / Arbeitsplatz",
+        "1568": "Sport / Freizeit",
+        "1569": "Strasse / Öffentlicher Raum",
+        "1570": "Öffentliches Gebäude",
+        "1571": "Bildungseinrichtung",
+        "2079": "Arztpraxis",
+        "2741": "Sonstige Gesundheitseinrichtung",
+        "1572": "Sonstiges",
+        "1573": "Unbekannt"
+      }
+    },
+    "zckb": {
+      "title": "Kollaps beobachtet",
+      "option": {
+        "2066": "Nicht beobachtet",
+        "2067": "Durch Ersthelfer",
+        "2068": "Durch First Responder",
+        "2069": "Durch Rettungsdienst",
+        "2070": "Unbekannt"
+      }
+    },
+    "rosc": {
+      "title": "Jemals ROSC",
+      "option": {
+        "1613": "Ja",
+        "1614": "Nein",
+        "1615": "Unbekannt"
+      }
+    },
+    "autocpr": {
+      "title": "Herzmassage",
+      "option": {
+        "1863": "Vorwiegend Manuell",
+        "1864": "Vorwiegend Maschinell",
+        "1865": "Unbekannt"
+      }
+    },
+    "noMatch": "Kein Matching möglich"
+  },
+  "exportPage": {
+    "title": "Export"
+  },
+  "filter": {
+    "DateName1": "Einsatzdatum",
+    "DateName2": "Entlassungsdatum",
+    "cb1": "Vollständig",
+    "cb2": "EV-Protokoll (SWISSRECA) vorhanden",
+    "error": "Das bis-Datum kann nicht kleiner sein als das von-Datum.",
+    "from": "Von",
+    "phDateName": "Art des Datums",
+    "phSearch": "Suche",
+    "reset": "Filter zurücksetzen",
+    "title": "Filter und Suche",
+    "to": "Bis"
+  },
+  "help": {
+    "helpBox": {
+      "button": "Okay",
+      "title": "Beschreibung"
+    }
+  },
+  "importPage": {
+    "stepper": {
+      "firstStep": {
+        "subStep": {
+          "1": "Wählen Sie eine CSV-Datei mit Erstversorgungsprotokollen (SWISSRECA) für den Import aus:",
+          "2": "Welche Sprache hat der Inhalt der CSV Datei?",
+          "3": "Datei- und Sprachauswahl bestätigen:"
+        },
+        "csv-button": "CSV-Datei auswählen",
+        "language": "Sprache",
+        "submit-button": "CSV-Datei einlesen",
+        "title": "CSV-Datei auswählen"
+      },
+      "secondStep": {
+        "imported": "Bereits importiert",
+        "title": "Import überprüfen und Zeilen auswählen",
+        "legend": {
+          "title": "Legende",
+          "red": "In der Sprache konnte kein entsprechender Wert gefunden werden.",
+          "orange": "Dieser Wert konnte keinem Wert des CAC Datensatzes zugeordnet werden.",
+          "blue": "Es wurden bereits Daten für dieses Protokoll importiert.",
+          "gray": "Kein Protokoll mit dieser Protokollnummer EV gefunden."
+        }
+      },
+      "thirdStep": {
+        "reset": "Import zurücksetzen",
+        "title": "Fertig",
+        "successSnackBar": "Protokolle erfolgreich importiert.",
+        "success": "Folgende Protokolle wurden importiert."
+      }
+    },
+    "error": {
+      "language": "Die Sprache ist nicht verfügbar."
+    },
+    "title": "Import"
+  },
+  "loginPage": {
+    "button": "Anmelden",
+    "error": {
+      "password": "Passwort ist zu kurz.",
+      "user": "Benutzername oder Passwort ist falsch.",
+      "username": "Benutzername ist zu kurz."
+    },
+    "info": {
+      "logout": "Sie wurden erfolgreich abgemeldet."
+    },
+    "labelPassword": "Passwort",
+    "labelUsername": "Benutzername"
+  },
+  "measuringUnit": {
+    "1": "mmHg",
+    "2": "kPa",
+    "3": "mg/dl",
+    "4": "mmol/l",
+    "5": "μmol/l",
+    "6": "g/l",
+    "7": "g/dl",
+    "8": "µg/l",
+    "9": "ng/l",
+    "10": "pg/l",
+    "11": "mg",
+    "12": "1/min",
+    "13": "%",
+    "14": "°C"
+  },
+  "menu": {
+    "administration": "Administration",
+    "export": "Export",
+    "filter": "Filter",
+    "import": "Import",
+    "logout": "Abmelden",
+    "overview": "Protokollübersicht",
+    "settings": "Einstellungen",
+    "title": "Menü",
+    "legal": "Rechtliches",
+    "user": "Benutzer"
+  },
+  "message": {
+    "connection": "Verbindung zum Server fehlgeschlagen.",
+    "unknown": "Unerwarteter Fehler",
+    "action": "Verstanden",
+    "back": "Zurück",
+    "cancel": "Abbrechen",
+    "delete": "Löschen",
+    "deleteUser": "Benutzer löschen",
+    "next": "Weiter",
+    "wrong": "Etwas ist schiefgelaufen.",
+    "unexpected": "Unerwartete Werte",
+    "add": "Hinzufügen",
+    "infoLogout": "Sie werden in {{min}} Minuten abgemeldet.",
+    "yes": "Ja",
+    "no": "Nein",
+    "doesNotExist": "Nicht vorhanden"
+  },
+  "overviewPage": {
+    "edit": "Bearbeiten",
+    "paginatorItem": "Protokolle pro Seite:",
+    "info": {
+      "delete": "Das Protokoll wurde erfolgreich gelöscht.",
+      "save": "Das Protokoll wurde erfolgreich gespeichert."
+    },
+    "new": "Neu",
+    "no": "Nein",
+    "table": {
+      "C1": "PID",
+      "C2": "Einsatzdatum",
+      "C3": "Geburtsdatum",
+      "C4": "Geschlecht",
+      "C5": "Entlassungsdatum",
+      "C6": "Status Pflichtfelder",
+      "C7": "Protokollnummer EV",
+      "C8": "SWISSRECA importiert?"
+    },
+    "title": "Protokollübersicht",
+    "yes": "Ja"
+  },
+  "protocolPage": {
+    "button": {
+      "select": "Wählen",
+      "clear": "Feld leeren"
+    },
+    "tabs": {
+      "1": "Notfall",
+      "2": "Intensivstation",
+      "3": "Einstellungen"
+    },
+    "autoSave": {
+      "save": "Automatisch speichern"
+    },
+    "confirmTitle": "Möchten Sie das Protokoll des Patienten {{patid}} wirklich löschen?",
+    "delProtocol": "Protokoll löschen",
+    "title": "PatID: {{patId}} | Geburtsdatum: {{geburtDat}}",
+    "timepicker": "* Verwenden Sie die Pfeiltasten (⇅), um die Zeit zu ändern.",
+    "suffix": {
+      "multiple": "[(als Vielfaches des oberen Normwertes)]"
+    },
+    "success": {
+      "changed": "Protokoll des Patienten {{patid}} wurde erfolgreich bearbeitet.",
+      "deleted": "Protokoll des Patienten {{patid}} wurde erfolgreich gelöscht."
+    }
+  },
+  "settingsPage": {
+    "buttonSave": "Änderungen speichern",
+    "error": {
+      "language": "Die Sprache ist nicht verfügbar."
+    },
+    "info": {
+      "language": "Die Sprache wurde erfolgreich geänderet."
+    },
+    "subTitle3.1": "Sprache",
+    "title": "Einstellungen"
+  },
+  "legalPage": {
+    "title": "Rechtliches",
+    "reareg": {
+      "title": "Lizenz ReaReg",
+      "gpl": "GPL v3",
+      "licensePart1": "ReaReg",
+      "licensePart2": "Copyright (C) 2021  Marko Miletic und Alain Nippel",
+      "licensePart3": "This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.",
+      "licensePart4": "This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.",
+      "licensePart5": "You should have received a copy of the GNU General Public License along with this program. If not, see "
+    },
+    "thirdParties": {
+      "title": "Lizenz Erweiterungen von ReaReg",
+      "mit": "MIT",
+      "licensePart1": "Jedem, der eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die \"Software\") erhält, wird hiermit kostenlos die Erlaubnis erteilt, ohne Einschränkung mit der Software zu handeln, einschließlich und ohne Einschränkung der Rechte zur Nutzung, zum Kopieren, Ändern, Zusammenführen, Veröffentlichen, Verteilen, Unterlizenzieren und/oder Verkaufen von Kopien der Software, und Personen, denen die Software zur Verfügung gestellt wird, dies unter den folgenden Bedingungen zu gestatten:",
+      "licensePart2": "Der obige Urheberrechtshinweis und dieser Genehmigungshinweis müssen in allen Kopien oder wesentlichen Teilen der Software enthalten sein.",
+      "licensePart3": "DIE SOFTWARE WIRD OHNE MÄNGELGEWÄHR UND OHNE JEGLICHE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG VON RECHTEN DRITTER, ZUR VERFÜGUNG GESTELLT. DIE AUTOREN ODER URHEBERRECHTSINHABER SIND IN KEINEM FALL HAFTBAR FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE VERPFLICHTUNGEN, OB IN EINER VERTRAGS- ODER HAFTUNGSKLAGE, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE SICH AUS, AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN GESCHÄFTEN MIT DER SOFTWARE ERGEBEN.",
+      "listTitle": "Folgende von ReaReg verwendeten Erweiterungen sind unter der Lizenz MIT lizenziert:",
+      "link1": "@angular/animations",
+      "copy1": "Copyright (c) 2021 Google LLC.",
+      "link2": "@angular/cdk",
+      "copy2": "Copyright (c) 2021 Google LLC.",
+      "link3": "@angular/common",
+      "copy3": "Copyright (c) 2010-2021 Google LLC.",
+      "link4": "@angular/compiler",
+      "copy4": "Copyright (c) 2010-2021 Google LLC.",
+      "link5": "@angular/core",
+      "copy5": "Copyright (c) 2010-2021 Google LLC.",
+      "link6": "@angular/forms",
+      "copy6": "Copyright (c) 2010-2021 Google LLC.",
+      "link7": "@angular/material",
+      "copy7": "Copyright (c) 2021 Google LLC.",
+      "link8": "@angular/material-moment-adapter",
+      "copy8": "Copyright (c) 2021 Google LLC.",
+      "link9": "@angular/platform-browser",
+      "copy9": "Copyright (c) 2010-2021 Google LLC.",
+      "link10": "@angular/platform-browser-dynamic",
+      "copy10": "Copyright (c) 2010-2021 Google LLC.",
+      "link11": "@angular/router",
+      "copy11": "Copyright (c) 2010-2021 Google LLC.",
+      "link12": "@angular/service-worker",
+      "copy12": "Copyright (c) 2010-2021 Google LLC.",
+      "link13": "@auth0/angular-jwt",
+      "copy13": "Copyright (c) 2017 Auth0 Inc.",
+      "link14": "@ngx-translate/core",
+      "copy14": "Copyright (c) 2018 Olivier Combe",
+      "link15": "@ngx-translate/http-loader",
+      "copy15": "Copyright (c) 2018 Olivier Combe",
+      "link16": "moment",
+      "copy16": "Copyright (c) JS Foundation and other contributors",
+      "link17": "@ngx-material-timepicker",
+      "copy17": "Copyright (c) 2018 Vitalii Boiko",
+      "link18": "ngx-papaparse",
+      "copy18": "Copyright (c) 2017 Albert Haff",
+      "link19": "zone.js",
+      "copy19": "Copyright (c) 2010-2021 Google LLC."
+    },
+    "middleware": {
+      "title": "Lizenz der Erweiterungen der Middleware von ReaReg",
+      "mit": "MIT",
+      "licensePart1": "Jedem, der eine Kopie dieser Software und der zugehörigen Dokumentationsdateien (die \"Software\") erhält, wird hiermit kostenlos die Erlaubnis erteilt, ohne Einschränkung mit der Software zu handeln, einschließlich und ohne Einschränkung der Rechte zur Nutzung, zum Kopieren, Ändern, Zusammenführen, Veröffentlichen, Verteilen, Unterlizenzieren und/oder Verkaufen von Kopien der Software, und Personen, denen die Software zur Verfügung gestellt wird, dies unter den folgenden Bedingungen zu gestatten:",
+      "licensePart2": "Der obige Urheberrechtshinweis und dieser Genehmigungshinweis müssen in allen Kopien oder wesentlichen Teilen der Software enthalten sein.",
+      "licensePart3": "DIE SOFTWARE WIRD OHNE MÄNGELGEWÄHR UND OHNE JEGLICHE AUSDRÜCKLICHE ODER STILLSCHWEIGENDE GEWÄHRLEISTUNG, EINSCHLIEßLICH, ABER NICHT BESCHRÄNKT AUF DIE GEWÄHRLEISTUNG DER MARKTGÄNGIGKEIT, DER EIGNUNG FÜR EINEN BESTIMMTEN ZWECK UND DER NICHTVERLETZUNG VON RECHTEN DRITTER, ZUR VERFÜGUNG GESTELLT. DIE AUTOREN ODER URHEBERRECHTSINHABER SIND IN KEINEM FALL HAFTBAR FÜR ANSPRÜCHE, SCHÄDEN ODER ANDERE VERPFLICHTUNGEN, OB IN EINER VERTRAGS- ODER HAFTUNGSKLAGE, EINER UNERLAUBTEN HANDLUNG ODER ANDERWEITIG, DIE SICH AUS, AUS ODER IN VERBINDUNG MIT DER SOFTWARE ODER DER NUTZUNG ODER ANDEREN GESCHÄFTEN MIT DER SOFTWARE ERGEBEN.",
+      "listTitle": "Folgende von der Middleware von ReaReg verwendeten Erweiterungen sind unter der Lizenz MIT lizenziert:",
+      "link1": "bcrypt",
+      "copy1": "Copyright (c) 2010 Nicholas Campbell",
+      "link2": "cors",
+      "copy2": "Copyright (c) 2013 Troy Goode <troygoode@gmail.com>",
+      "link3": "express",
+      "copy3": "Copyright (c) 2009-2014 TJ Holowaychuk <tj@vision-media.ca> Copyright (c) 2013-2014 Roman Shtylman <shtylman+expressjs@gmail.com> Copyright (c) 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>",
+      "link4": "jsonwebtoken",
+      "copy4": "Copyright (c) 2015 Auth0, Inc. <support@auth0.com> (https://auth0.com)",
+      "link5": "pg",
+      "copy5": "Copyright (c) 2010 - 2021 Brian Carlson",
+      "link6": "body-parser",
+      "copy6": "Copyright (c) 2014 Jonathan Ong <me@jongleberry.com> Copyright (c) 2014-2015 Douglas Christopher Wilson <doug@somethingdoug.com>"
+    }
+  },
+  "pageNotFound": {
+    "title": "Fehler - 404",
+    "contentAuth": "Die Seite \"{{url}}\" wurde leider nicht gefunden. Sie werden in Kürze zur Übersichtsseite zurückgeleitet.",
+    "contentNoAuth": "Die Seite \"{{url}}\" wurde leider nicht gefunden. Sie werden in Kürze zum Login zurückgeleitet.",
+    "button1": "Zur Übersicht",
+    "button2": "Zum Login"
+  },
+  "userPage": {
+    "buttonSave": "Änderungen speichern",
+    "error": {
+      "confirmPassword": "Passwörter stimmen nicht überein.",
+      "password1": "Passwort muss mindestens 8 Zeichen lang sein.",
+      "password2": "Passwort muss beinhalten: 1 Grossbuchstabe, 1 Kleinbuchstabe, 1 Zahl und 1 Sonderzeichen."
+    },
+    "labelConfirmPassword": "Passwort wiederholen",
+    "labelPassword": "Passwort",
+    "labelUsername": "Benutzername",
+    "subTitleUser": "Passwort ändern",
+    "success": {
+      "passwordChanged": "Passwort wurde erfolgreich geändert."
+    },
+    "title": "Benutzer"
+  },
+  "wvProtocol": {
+    "acb": {
+      "title": "Operative Revaskularisierung",
+      "descr": "Erfolgte eine operative Revaskularisierung?",
+      "option": {
+        "02": "nein",
+        "03": "ja - in <6h (Notfall)",
+        "04": "ja - in <24h (dringlich)",
+        "05": "ja - elektiver Eingriff"
+      }
+    },
+    "adatum": {
+      "title": "Datum der Aufnahme",
+      "descr": "Das Datum der Aufnahme in das Krankenhaus bzw. die weiterbehandelnde Einheit.",
+      "radio": {
+        "1000-01-01": "nicht dokumentiert"
+      }
+    },
+    "adrena": {
+      "title": "Suprarenin",
+      "descr": "Erfassen der Gabe von Adrenalin.",
+      "radio": {
+        "-1": "Keine Angabe",
+        "00.0": "keine Medikamentengabe",
+        "99.9": "nicht bekannt"
+      }
+    },
+    "afaufn": {
+      "title": "Atemfrequenz",
+      "descr": "Atem/Beatmungsfrequenz zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "nicht dokumentiert"
+      }
+    },
+    "aktkuehl": {
+      "title": "Temperaturmanagement durchgeführt",
+      "descr": "Wurde ein Temperaturmanagement durchgeführt?",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "ja",
+        "02": "nein",
+        "03": "Technik nicht verfügbar"
+      }
+    },
+    "amioda": {
+      "title": "Amiodaron",
+      "descr": "Erfassen der Gabe von Amiodaron.",
+      "radio": {
+        "-1": "keine Angaben",
+        "0": "keine Medikamentengabe",
+        "999": "nicht bekannt"
+      }
+    },
+    "aufnq": {
+      "title": "Aufnahme von",
+      "descr": "Von welchem Vorbehandler wird der Patient übernommen?",
+      "option": {
+        "01": "Präklinik (vom Notarzt)",
+        "02": "Klinik (vom Notfallteam/MET)"
+      }
+    },
+    "autocpr": {
+      "title": "Mechanische Thoraxkompressionsgeräte",
+      "descr": "Wenn Geräte, die eine automatische mechanische Kompression des Brustkorbes vornehmen, im Rahmen der Reanimation zum Einsatz kommen, soll es hier vermerkt werden.",
+      "option": {
+        "05": "Ja",
+        "06": "Nein"
+      }
+    },
+    "beataufn": {
+      "title": "Beatmung",
+      "descr": "Erfolgte zum Zeitpunkt der Aufnahme eine Beatmung (maschinell/manuell)?",
+      "option": {
+        "01": "Ja",
+        "02": "Nein"
+      }
+    },
+    "beatstd": {
+      "title": "invasive Beatmungsstunden",
+      "descr": "Gesamtsumme der Beatmungsstunden mit invasiver Beatmung.",
+      "radio": {
+        "998": ">997 Stunden",
+        "999": "nicht bekannt"
+      }
+    },
+    "beaufn": {
+      "title": "BE",
+      "descr": "Erster BE-Wert nach ROSC.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "99.9": "nicht messbar"
+      }
+    },
+    "bewaufn": {
+      "title": "Bewusstsein",
+      "descr": "Bewusstseinslage zum Zeitpunkt der Aufnahme.",
+      "option": {
+        "01": "Analgosedierung / Narkose",
+        "02": "orientiert",
+        "03": "getrübt",
+        "04": "bewusstlos",
+        "98": "sonstige",
+        "99": "nicht beurteilbar"
+      }
+    },
+    "bgaaufn": {
+      "title": "Erste BGA nach ROSC",
+      "descr": "Quelle der ersten BGA nach ROSC.",
+      "option": {
+        "00": "keine BGA",
+        "01": "kapillär",
+        "02": "arteriell",
+        "03": "venös",
+        "99": "BGA-Typ nicht bekannt"
+      }
+    },
+    "bnpaufn": {
+      "title": "BNP",
+      "descr": "1. gemessenes BNP."
+    },
+    "bzaufn": {
+      "title": "Blutzucker",
+      "descr": "Erster Blutzucker-Wert nach ROSC.",
+      "radio": {
+        "999": "nicht messbar"
+      }
+    },
+    "bzziel2": {
+      "title": "Glucose-Zielkorridor",
+      "descr": "Wurde der Glucose-Zielkorridor (<10 g/l oder >180 mg/dl) in den ersten 24 Stunden überwiegend erreicht?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "cct": {
+      "title": "cCT",
+      "descr": "Wurde eine Computertomographie des Kopfes (cCT) zur Einschätzung der Prognose des Patienten durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "cmrt": {
+      "title": "MRT Kopf",
+      "descr": "Wurde eine Kernspintomographie des Kopfes (cMRT) zur Einschätzung der Prognose des Patienten durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "co2aufn": {
+      "title": "exp. CO2",
+      "descr": "Endexspiratorischer CO2 Wert zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "keine Angaben"
+      }
+    },
+    "coro": {
+      "title": "Koronarangiographie",
+      "descr": "Wurde eine Koronarangiographie durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "coro_cpr": {
+      "title": "Koronarangiographie unter CPR",
+      "descr": "Wurde die Koronarangiographie unter laufender Reanimation durchgeführt?",
+      "option": {
+        "01": "nein",
+        "02": "ja - laufende Reanimation (manuell)",
+        "03": "ja - laufende Reanimation mit mechanischen Hilfsmitteln",
+        "04": "ja - laufende Reanimation mit Extracorporal Life Support (ECLS)",
+        "98": "ja - sonstige"
+      }
+    },
+    "cpcentl": {
+      "title": "Entlassung CPC",
+      "descr": "CPC bei Entlassung.",
+      "option": {
+        "01": "gute cerebr. Leistungsfähigkeit",
+        "02": "mässige cerebr. Behinderung",
+        "03": "schwere cerebr. Behinderung",
+        "04": "Koma, vegetativer Zustand",
+        "99": "nicht bekannt"
+      }
+    },
+    "cpcvor": {
+      "title": "CPC vor Kreislaufstillstand",
+      "descr": "CPC vor Eintritt des Herz-Kreislauf-Stillstandes (z.B. durch Befragung der Angehörigen).",
+      "option": {
+        "01": "gute cerebr. Leistungsfähigkeit",
+        "02": "mässige cerebr. Behinderung",
+        "03": "schwere cerebr. Behinderung",
+        "04": "Koma, vegetativer Zustand"
+      }
+    },
+    "ct": {
+      "title": "CT",
+      "descr": "Wurde eine Computertomographie durchgeführt?",
+      "option": {
+        "01": "ja",
+        "03": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "datum": {
+      "title": "Einsatzdatum",
+      "descr": "Das Datum der Reanimationsmassnahmen. Bei datumsübergreifenden Einsätzen gilt der Beginn der Massnahmen."
+    },
+    "dauerkuehl": {
+      "title": "Dauer Temperaturmanagement",
+      "descr": "Wie lange wurde das Temperaturmanagement durchgeführt?",
+      "option": {
+        "01": "<24 Stunden",
+        "02": "24-48 Stunden",
+        "03": "48-72 Stunden",
+        "04": ">72 Stunden",
+        "99": "nicht bekannt"
+      }
+    },
+    "dcoro": {
+      "title": "Koronarangiographie - Datum",
+      "descr": "Wann (Datum) wurde die Koronarangiographie durchgeführt?"
+    },
+    "dct": {
+      "title": "CT - Datum",
+      "descr": "Wann (Datum) wurde das CT durchgeführt?"
+    },
+    "decls": {
+      "title": "ECLS - Datum",
+      "descr": "Wann (Datum) wurde das ECLS-System implantiert?"
+    },
+    "dekg12": {
+      "title": "12-Kanal-EKG - Datum",
+      "descr": "Wann (Datum) wurde das 12-Kanal-EKG durchgeführt?"
+    },
+    "diabp": {
+      "title": "IABP - Datum",
+      "descr": "Wann (Datum) wurde das IABP-System implantiert?"
+    },
+    "dimpella": {
+      "title": "IMPELLA - Datum",
+      "descr": "Wann (Datum) wurde das IMPELLA-System implantiert?"
+    },
+    "dkuehlbeg": {
+      "title": "Beginn Temperaturmanagement - Datum",
+      "descr": "Wann (Datum) wurde mit der aktiven Kühlung bzw. mit dem Temperaturmanagement begonnen?",
+      "radio": {
+        "9999-99-99": "nicht bekannt"
+      }
+    },
+    "dlyse": {
+      "title": "Lyse - Datum",
+      "descr": "Wann (Datum) erfolgte die Lysetherapie?"
+    },
+    "dtod": {
+      "title": "Todesdatum",
+      "descr": "Wann (Datum) verstarb der Patient?",
+      "radio": {
+        "9999-99-99": "nicht bekannt"
+      }
+    },
+    "dzieltemp": {
+      "title": "Zieltemperatur erreicht - Datum",
+      "descr": "Wann (Datum) wurde die Zieltemperatur erreicht?"
+    },
+    "ecls": {
+      "title": "ECLS",
+      "descr": "Wurde ein System zum Extracorporal Life Support (ECLS) genutzt?",
+      "option": {
+        "01": "nein",
+        "02": "ja, vor ROSC (eCPR)",
+        "03": "ja, nach ROSC"
+      }
+    },
+    "eclsiabp": {
+      "title": "ECLS + IABP",
+      "descr": "Wurden ECLS und IABP-Systeme gemeinsam genutzt?",
+      "option": {
+        "01": "ja, initial",
+        "02": "ja, im Verlauf",
+        "03": "nein"
+      }
+    },
+    "ecprart": {
+      "title": "Punktionsort arterielle Kanüle",
+      "descr": "In welchem Gefäss erfolgte die Implantation der arteriellen Kanüle?",
+      "option": {
+        "01": "A. femoralis",
+        "02": "Aorta ascendes",
+        "03": "A. subclavia",
+        "98": "sonstige"
+      }
+    },
+    "ecprbe": {
+      "title": "BE der letzten BGA vor Implantation der eCPR",
+      "descr": "Baseexzess bei Implantation ECLS."
+    },
+    "ecprbein": {
+      "title": "primäre Anlage distale Beinperfusion",
+      "descr": "Erfolgte die Anlage einer anterograden bzw. distalen Beinperfusion?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "ecprdbk": {
+      "title": "Datum Beginn Kanülierung",
+      "descr": "Wann (Datum) wurde mit der Kanülierung der eCPR begonnen?",
+      "radio": {
+        "8888-88-88": "keine eCPR"
+      }
+    },
+    "ecprdend": {
+      "title": "Datum Beendigung eCPR",
+      "descr": "Wann wurde die ECLS-Therapie beendet bzw. die ECLS explantiert (Datum)?",
+      "radio": {
+        "8888-88-88": "keine eCPR"
+      }
+    },
+    "ecprdst": {
+      "title": "Datum eCPR Start",
+      "descr": "Wann (Datum) wurde die ECLS gestartet?",
+      "radio": {
+        "8888-88-88": "keine eCPR"
+      }
+    },
+    "ecprende": {
+      "title": "Beendigung der eCPR",
+      "descr": "Warum wurde die eCPR beendet?",
+      "option": {
+        "01": "ROSC / Restitutio",
+        "02": "Tod / Hirntod",
+        "03": "Therapie-Begrenzung"
+      }
+    },
+    "ecprkompl": {
+      "title": "Komplikationen unter eCPR",
+      "descr": "Traten im Rahmen der ECLS-Therapie Komplikationen auf?",
+      "option": {
+        "01": "keine",
+        "02": "Extremitätenischämie",
+        "03": "Kanülendislokation",
+        "04": "technische Fehlfunktion",
+        "98": "Sonstiges",
+        "99": "nicht bekannt"
+      }
+    },
+    "ecprlact": {
+      "title": "Lactat der letzten BGA vor Implantation der eCPR",
+      "descr": "Lactat in mg/dl oder mmol/l bei Implantation ECLS."
+    },
+    "ecprpao2": {
+      "title": "paO2 der letzten BGA vor Implantation der eCPR",
+      "descr": "paO2 in BGA bei Implantation ECLS."
+    },
+    "ecprpco2": {
+      "title": "pCO2 der letzten BGA vor Implantation der eCPR",
+      "descr": "pCO2 in BGA bei Implantation ECLS."
+    },
+    "ecprph": {
+      "title": "pH der letzten BGA vor Implantation der eCPR",
+      "descr": "pH bei Implantation ECLS."
+    },
+    "ecprpunkt": {
+      "title": "Punktionstechnik",
+      "descr": "Welche Punktionstechnik wurde zur Anlage der Kanülen überwiegend verwendet?",
+      "option": {
+        "01": "sonographisch gesteuert",
+        "02": "unter Durchleuchtung",
+        "03": "Landmarkentechnik",
+        "04": "offen chirurgisch"
+      }
+    },
+    "ecprvav": {
+      "title": "VA+V-ECMO",
+      "descr": "Erfolgte die Etablierung oder der Switch auf eine VA+V (veno-arterielle-venöse) ECMOe Therapie?",
+      "option": {
+        "01": "ja, initial",
+        "02": "ja, Wechsel im späteren Therapieverlauf",
+        "03": "nein"
+      }
+    },
+    "ecprven": {
+      "title": "Punktionsort venöse Kanüle",
+      "descr": "In welchem Gefäss erfolgte die Implantation der venösen Kanüle(n)?",
+      "option": {
+        "01": "V. femoralis",
+        "02": "rechtes Vorhofohr",
+        "03": "V. subclavia",
+        "04": "V. jugularis interna",
+        "98": "sonstige"
+      }
+    },
+    "ecprzbk": {
+      "title": "Zeitpunkt Beginn Kanülierung",
+      "descr": "Wann (Uhrzeit) wurde mit der Kanülierung der eCPR begonnen?"
+    },
+    "ecprzend": {
+      "title": "Zeitpunkt Beendigung eCPR",
+      "descr": "Wann wurde die ECLS-Therapie beendet bzw. die ECLS explantiert (Uhrzeit)?"
+    },
+    "ecprzst": {
+      "title": "Zeitpunkt eCPR Start",
+      "descr": "Wann (Uhrzeit) wurde die ECLS gestartet?"
+    },
+    "eegwv": {
+      "title": "EEG",
+      "descr": "Wurde eine Elektroencephalographie (EEG) zur Einschätzung der Prognose des Patienten durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "efast": {
+      "title": "eFAST",
+      "descr": "Wurde ein eFAST durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "einsaort_cac": {
+      "title": "Ort des Herz-Kreislauf-Stillstands",
+      "descr": "Bei jeder präklinischen Reanimation ist der Einsatzort nach dem gültigen Schlüssel des MIND3 und den Vorgaben des Utstein-Style-Protokolls zu erfassen.",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "Wohnung",
+        "02": "Altenheim",
+        "03": "Arbeitsplatz",
+        "04": "Arztpraxis",
+        "06": "Öffentlicher Raum",
+        "07": "Krankenhaus",
+        "09": "Sonstiger",
+        "10": "Bildungseinrichtungen",
+        "11": "Sportstätte",
+        "12": "Geburtshaus/-einrichtung",
+        "99": "nicht bekannt"
+      }
+    },
+    "entldat": {
+      "title": "Entlassungsdatum",
+      "descr": "Wann erfolgte die Entlassung aus der stationären Behandlung?",
+      "radio": {
+        "9999-99-99": "nicht dokumentiert"
+      }
+    },
+    "ekg1": {
+      "title": "erstes EKG bei Herz-Kreislauf-Stillstand",
+      "descr": "Zu dokumentieren ist der schlechteste EKG-Befund bzw. EKG-Erstbefund bei Kreislaufstillstand durch den Rettungsdienst/das Notfallteam.",
+      "option": {
+        "01": "Sinusrhythmus",
+        "09": "Kammerflimmern, pVT",
+        "10": "Pulslose Elektrische Aktivität",
+        "11": "Asystolie",
+        "97": "ROSC vor Ankunft, kein EKG vorliegend",
+        "99": "nicht bekannt"
+      }
+    },
+    "ekg12": {
+      "title": "12-Kanal-EKG",
+      "descr": "Wurde ein 12-Kanal-EKG durchgeführt?",
+      "option": {
+        "01": "ja",
+        "03": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "ekg12auf": {
+      "title": "EKG auffällig",
+      "descr": "Ergaben sich aus dem EKG relevante Erkenntnisse?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "ekgaufn": {
+      "title": "EKG",
+      "descr": "EKG-Befund zum Zeitpunkt der Aufnahme.",
+      "option": {
+        "00": "kein EKG",
+        "01": "Sinusrhythmus",
+        "02": "absolute Arrhythmie",
+        "03": "AV-Block II",
+        "04": "AV-Block III",
+        "05": "schmale QRS-Tachykardie",
+        "06": "breite QRS-Tachykardie",
+        "09": "Kammerflimmern, pVT",
+        "10": "pulslose elektrische Aktivität",
+        "11": "Asystolie",
+        "12": "Schrittmacherrhythmus",
+        "13": "Infarkt-EKG/STEMI",
+        "98": "sonstiges",
+        "99": "nicht beurteilbar"
+      }
+    },
+    "eoko": {
+      "title": "Einsatzort Klinik Ort",
+      "descr": "Hier kann bei einem innerklinischen Herz-Kreislauf-Stillstand der Ort, an welchem sich der Notfall ereignet hat, erfasst werden.",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "Normalstation",
+        "02": "IMC",
+        "03": "Intensivstation",
+        "04": "Notaufnahme",
+        "05": "OP",
+        "06": "Aufwachraum",
+        "07": "Funktionsbereich",
+        "08": "Gelände",
+        "09": "Sonstiges",
+        "10": "Schockraum",
+        "99": "nicht bekannt"
+      }
+    },
+    "epu": {
+      "title": "Interventionelle Rhythmustherapie (EPU)",
+      "descr": "Erfolgte eine Interventionelle Rhythmustherapie (EPU)?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "eq5d": {
+      "title": "EQ-5D",
+      "descr": "Welches Ergebnis lieferte der EQ-5D Test? Eingabe des Rohwertes."
+    },
+    "fieb": {
+      "title": "Fieberprävention",
+      "descr": "Erfolgte eine Fieberprävention?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "fiebrpae": {
+      "title": "Fieberprävention mit Medikamentös / Devices",
+      "descr": "Wie erfolgte die Fieberprävention?",
+      "option": {
+        "01": "Medikamente",
+        "02": "Devices"
+      }
+    },
+    "gebdat": {
+      "title": "Geburtsdatum",
+      "descr": "Das Geburtsdatum des Patienten.",
+      "radio": {
+        "1000-01-01": "nicht bekannt"
+      }
+    },
+    "geniabp": {
+      "title": "IABP",
+      "descr": "Wurde eine hämodynamiche Unterstützung mittels intraaortale Ballonpumpe (IAPB)-System genutzt?",
+      "option": {
+        "02": "nein",
+        "03": "ja, vor ROSC",
+        "04": "ja, nach ROSC",
+        "05": "ja, Zeitpunkt nicht bekannt"
+      }
+    },
+    "genimpella": {
+      "title": "IMPELLA",
+      "descr": "Wurde eine IMPELLA eingesetzt?",
+      "option": {
+        "02": "nein",
+        "03": "ja, vor ROSC",
+        "04": "ja, nach ROSC"
+      }
+    },
+    "genpacerwv": {
+      "title": "Schrittmachertherapie",
+      "descr": "Erfolgte eine Schrittmachertherapie?",
+      "option": {
+        "02": "nein",
+        "03": "ja - vor ROSC",
+        "04": "ja - nach ROSC"
+      }
+    },
+    "geschl": {
+      "title": "Geschlecht",
+      "descr": "Geschlecht des Patienten.",
+      "option": {
+        "01": "männlich",
+        "02": "weiblich",
+        "03": "divers"
+      }
+    },
+    "gthlimit": {
+      "title": "Therapielimitierung Grund",
+      "descr": "Warum wurde die Therapie limitiert?",
+      "option": {
+        "01": "DNR-Order/Patientenverfügung vorhanden",
+        "02": "aussichtslose Grunderkrankung bekannt",
+        "03": "Ergebnis neuroprognostischer Tests",
+        "04": "Hirntod",
+        "98": "sonstige Faktoren"
+      }
+    },
+    "hbaufn": {
+      "title": "Hb",
+      "descr": "Erster Hb-Wert nach ROSC.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "99.9": "nicht messbar"
+      }
+    },
+    "hfaufn": {
+      "title": "Herzfrequenz",
+      "descr": "Herzfrequenz zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999": "nicht messbar"
+      }
+    },
+    "hits": {
+      "title": "Behandlung reversibler Ursache",
+      "descr": "Wurde eine reversible Ursache des Herz-Kreislauf-Stillstands im Krankenhaus behandelt?",
+      "option": {
+        "01": "Hypoxie",
+        "02": "Hypothermie",
+        "03": "Elektrolytstörung/metabolische Störung",
+        "04": "Hypovolämie",
+        "05": "Herzbeuteltamponade",
+        "06": "Intoxikation",
+        "07": "Thromboembolie",
+        "08": "Spannungspneumothorax",
+        "98": "sonstige"
+      }
+    },
+    "icdimpl": {
+      "title": "Implantation eines ICD/SM",
+      "descr": "Wurde vor Entlassung eine Implantation eines ICD/Schrittmachers vorgenommen?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "icutage": {
+      "title": "Intensivtage",
+      "descr": "Anzahl der Intensivstations-Behandlungstage, Aufnahme- und Entlassungstag zählen je als 1 Tag.",
+      "radio": {
+        "998": ">997 Stunden",
+        "999": "nicht bekannt"
+      }
+    },
+    "iknumklin": {
+      "title": "Unternehmens-Identifikationsnummer",
+      "descr": "Jedes Schweizer Unternehmen hat eine einmalige Unternehmens-Identifikationsnummer (UID)."
+    },
+    "impellaecls": {
+      "title": "IMPELLA + ECLS",
+      "descr": "Wurden IMPEALLA und ECLS-Systeme gemeinsam genutzt?",
+      "option": {
+        "01": "ja, initial",
+        "02": "ja, im Verlauf",
+        "03": "nein"
+      }
+    },
+    "instab": {
+      "title": "Klinische Instabilität",
+      "descr": "Lag eine klinische Instabilität in den ersten 12h nach Aufnahme vor?",
+      "option": {
+        "01": "Hypoxie",
+        "02": "Hypotonie",
+        "03": "wiederholte CPR",
+        "04": "wiederholte Defibrillation",
+        "97": "keine",
+        "98": "sonstige"
+      }
+    },
+    "komplsek": {
+      "title": "Outcome-relevante Sekundärkomplikationen",
+      "descr": "Welche Sekundärkomplikationen traten während der stationären Therapie auf?",
+      "option": {
+        "02": "Sepsis",
+        "03": "zerebrale Ischämie",
+        "04": "Hirnblutung",
+        "05": "schwere andere Blutung",
+        "08": "akutes Nierenversagen",
+        "09": "Pneumonie",
+        "97": "keine",
+        "98": "sonstiges",
+        "99": "nicht bekannt"
+      }
+    },
+    "kreaaufn": {
+      "title": "Kreatinin",
+      "descr": "Erster Kreatinin-Wert bzw. Kreatinin-Wert zum Zeitpunkt der stationären Aufnahme.",
+      "radio": {
+        "999.9": "nicht messbar"
+      }
+    },
+    "kuehlbeg": {
+      "title": "Beginn Temperaturmanagement",
+      "descr": "Wann wurde mit dem Temperaturmanagement begonnen?",
+      "option": {
+        "01": "Rettungsdienst / Notfallteam",
+        "03": "Schockraum / Herzkatheter",
+        "04": "Intensivstation"
+      }
+    },
+    "kuehlrel": {
+      "title": "Relaxierung",
+      "descr": "Erfolgte eine Relaxierung?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "lactaufn": {
+      "title": "Lactat",
+      "descr": "Erster Lactat-Wert nach ROSC.",
+      "radio": {
+        "999": "nicht messbar"
+      }
+    },
+    "leb24h": {
+      "title": "24 Stunden Überleben",
+      "descr": "Hat der Patient 24 Stunden überlebt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "leb30d": {
+      "title": "30 Tage Überleben",
+      "descr": "Hat der Patient 30 Tage überlebt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "lebensqual1": {
+      "title": "Test zur Lebensqualität",
+      "descr": "Wurde ein Test zur Lebensqualität durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "lebentl": {
+      "title": "Lebend Entlassen",
+      "descr": "Konnte der Patient lebend aus dem Krankenhaus entlassen werden (unabhängig vom neurologischen Status, Outcome und  Verlegungsort)?",
+      "option": {
+        "01": "ja",
+        "02": "nein, Tod im Krankenhaus",
+        "99": "nicht bekannt"
+      }
+    },
+    "lyse": {
+      "title": "Lyse",
+      "descr": "Wurde eine Lysetherapie durchgeführt?",
+      "option": {
+        "01": "nein",
+        "02": "ja, bei Myokardinfarkt",
+        "03": "ja, bei Lungenembolie",
+        "98": "ja, sonstige Indikation",
+        "99": "nicht bekannt"
+      }
+    },
+    "lyse_rosc": {
+      "title": "Lysezeitpunkt",
+      "descr": "Wann wurde die Lysetherapie durchgeführt?",
+      "option": {
+        "01": "vor Herz-Kreislauf-Stillstand",
+        "02": "während CPR",
+        "03": "nach ROSC"
+      }
+    },
+    "mrsentl": {
+      "title": "Entlassung mRS",
+      "descr": "modifizierte Rankin-Skala (mRS) bei Entlassung.",
+      "option": {
+        "00": "0 - keine Symptome",
+        "01": "1 - keine relevante Beeinträchtigung",
+        "02": "2 - leichte Beeinträchtigung",
+        "03": "3 - mittelschwere Beeinträchtigung",
+        "04": "4 - höhergradige Beeinträchtigung",
+        "05": "5 - schwere Behinderung"
+      }
+    },
+    "mrsvor": {
+      "title": "mRS vor Kreislaufstillstand",
+      "descr": "mRS vor Eintritt des Herz-Kreislauf-Stillstandes (z.B. durch Befragung der Angehörigen).",
+      "option": {
+        "00": "0 - keine Symptome",
+        "01": "1 - keine relevante Beeinträchtigung",
+        "02": "2 - leichte Beeinträchtigung",
+        "03": "3 - mittelschwere Beeinträchtigung",
+        "04": "4 - höhergradige Beeinträchtigung",
+        "05": "5 - schwere Behinderung"
+      }
+    },
+    "naktkuehl_grund": {
+      "title": "Temperaturmanagement nicht durchgeführt",
+      "descr": "Warum wurde ein Temperaturmanagement nicht durchgeführt?",
+      "option": {
+        "04": "medizinische Gründe",
+        "05": "technische Gründe",
+        "06": "personelle Gründe",
+        "98": "wegen sonstigem Grund"
+      }
+    },
+    "namklin": {
+      "title": "Zielklinik",
+      "descr": "Auswahl der Zielklinik aus der Liste der hinterlegten Weiterversorger für den gewählten Standort.",
+      "option": {
+        "01": "Spital 1",
+        "02": "Spital 2",
+        "99999999": "nicht bekannt"
+      }
+    },
+    "ncoro_grund": {
+      "title": "Koronarangiographie nicht durchgeführt",
+      "descr": "Warum wurde die Koronarangiographie nicht durchgeführt?",
+      "option": {
+        "04": "medizinische Gründe",
+        "05": "personelle Gründe",
+        "06": "technische Gründe"
+      }
+    },
+    "neuro": {
+      "title": "Fachneurologische Untersuchung",
+      "descr": "Wurde eine fachneurologische Untersuchung durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "nse": {
+      "title": "NSE",
+      "descr": "Wurde die neuronenspezifische Enolase (NSE) zur Einschätzung der Prognose des Patienten bestimmt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "o2saufn": {
+      "title": "Sauerstoffsättigung",
+      "descr": "Periphere Sauerstoffsättigung zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999": "nicht messbar"
+      }
+    },
+    "eokc": {
+      "title": "Einsatzort Klinik Fachgebiet",
+      "descr": "Hier kann bei einem innerklinischen Herz-Kreislauf-Stillstand das Fachgebiet der Station, auf welcher sich der Notfall ereignet hat, erfasst werden.",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "Allg. Chirurgie",
+        "02": "Anästhesiologie",
+        "03": "Angiologie",
+        "04": "Augenheilkunde",
+        "05": "Dermatologie",
+        "06": "Endokrinologie",
+        "07": "Gastroenterologie",
+        "08": "Gefässchirurgie",
+        "09": "Geriatrie",
+        "10": "Gynäkologie",
+        "11": "Hals-Nasen-Ohrenheilkunde",
+        "12": "Herzchirurgie",
+        "13": "Innere Medizin",
+        "14": "Kardiologie",
+        "15": "Kinder- und Jugendmedizin",
+        "16": "Kinderchirurgie",
+        "17": "Mund-Kiefer-Gesichtschirurgie",
+        "18": "Nephrologie",
+        "19": "Neurochirurgie",
+        "20": "Neurologie",
+        "21": "Nuklearmedizin",
+        "22": "Onkologie/Hämatologie",
+        "23": "Orthopädie",
+        "24": "Palliativmedizin",
+        "25": "Physikalische Medizin",
+        "26": "Plastische Chirurgie",
+        "27": "Pneumologie",
+        "28": "Psychiatrie",
+        "29": "Rheumatologie",
+        "30": "Strahlentherapie",
+        "31": "Thoraxchirurgie",
+        "32": "Unfallchirurgie",
+        "33": "Urologie",
+        "34": "Zahnmedizin",
+        "35": "Kreissaal",
+        "36": "Radiologie",
+        "98": "Sonstige"
+      }
+    },
+    "organexpl": {
+      "title": "Organexplantation",
+      "descr": "Wurde eine Organentnahme durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "patid": {
+      "title": "Patientenidentifikation",
+      "descr": "Die Patientenidentifikation ist die PID des Patienten."
+    },
+    "pci": {
+      "title": "PCI",
+      "descr": "Wurde eine PCI durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "pcierfolg": {
+      "title": "PCI erfolgreich durchgeführt",
+      "descr": "Wurde die PCI erfolgreich durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "pcigefae": {
+      "title": "PCI erfolgreich - Welches Gefäss?",
+      "descr": "Welches Gefäss wurde im Rahmen der PCI versorgt?",
+      "option": {
+        "01": "Hauptstamm",
+        "02": "LAD",
+        "03": "RCX",
+        "04": "RCA",
+        "98": "Sonstiges"
+      }
+    },
+    "pco2aufn": {
+      "title": "pCO2",
+      "descr": "Erster pCO2-Wert nach ROSC.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999.9": "nicht messbar"
+      }
+    },
+    "pes": {
+      "title": "Pre Emergency Status",
+      "descr": "Zustand des Patienten vor Eintritt des plötzlichen Herztodes.",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "ohne Vorerkrankungen (VE)",
+        "02": "VE ohne nennenswerte Einschränkung des tgl. Lebens",
+        "03": "VE mit nennenswerter Einschränkung des tgl. Lebens",
+        "04": "normales tgl. Leben unmöglich",
+        "05": "Pat wird in den nächsten 24 Std. sterben mit und ohne med. Hilfe"
+      }
+    },
+    "phaufn": {
+      "title": "pH",
+      "descr": "Erster pH-Wert nach ROSC.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "99.9": "nicht messbar"
+      }
+    },
+    "protnr": {
+      "title": "Protokollnummer EV",
+      "descr": "Hier kann die Protokollnummer der Papierdokumentation oder die Einsatznummer des Notarzt- bzw. Notfallteamprotokolls angegeben werden."
+    },
+    "reaverl": {
+      "title": "Reanimationsbedingte Verletzungen",
+      "descr": "Lagen bei Aufnahme reanimationsbedingte Verletzungen vor?",
+      "option": {
+        "02": "ja, Sternumfraktur",
+        "03": "ja, Rippenfrakturen < 3",
+        "04": "ja, Rippenfrakturen >= 3",
+        "05": "ja, Organverletzung intrathorakal",
+        "06": "ja, Organverletzung abdominell",
+        "07": "ja, Trachealverletzung",
+        "08": "ja, sonstige",
+        "10": "nein"
+      }
+    },
+    "rosc": {
+      "title": "ROSC in Erstversorgung",
+      "descr": "Konnte in der Erstversorgung eine Rückkehr des Spontankreislaufs (ROSC) erreicht werden?",
+      "option": {
+        "01": "niemals ROSC",
+        "02": "jemals ROSC"
+      }
+    },
+    "rosca": {
+      "title": "ROSC bei Aufnahme",
+      "descr": "Bestand zum Zeitpunkt der Aufnahme ein Spontankreislauf des Patienten (ROSC)?",
+      "option": {
+        "01": "ja",
+        "02": "nein - laufende Reanimation (manuell)",
+        "03": "nein - laufende Reanimation (maschinell)",
+        "04": "nein - laufende Reanimation (ECLS)",
+        "98": "nein - sonstige",
+        "99": "nicht beurteilbar"
+      }
+    },
+    "roscecpr": {
+      "title": "ROSC unter eCPR",
+      "descr": "Gab es einen ROSC (elektrische oder hämodynamische Aktivität) unter eCPR?",
+      "option": {
+        "01": "nein",
+        "02": "ja, elektrische Aktivität",
+        "03": "ja, hämodynamische Aktivität",
+        "04": "ja, Aktivität nicht bekannt"
+      }
+    },
+    "rraufn": {
+      "title": "systolischer Blutdruck",
+      "descr": "Systolischer Blutdruck zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999": "nicht messbar"
+      }
+    },
+    "rrdaufn": {
+      "title": "diastolischer Blutdruck",
+      "descr": "Diastolischer Blutdruck zum Zeitpunkt der Aufnahme.",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999": "nicht messbar"
+      }
+    },
+    "rrziel3": {
+      "title": "Arterieller Mitteldruck",
+      "descr": "Welcher arterielle Mitteldruck wurde überwiegend in den ersten 12 Stunden erreicht?",
+      "radio": {
+        "-1": "nicht dokumentiert",
+        "999": "nicht messbar"
+      }
+    },
+    "sf12": {
+      "title": "SF-12",
+      "descr": "Welches Ergebnis lieferte der SF-12?"
+    },
+    "ssep": {
+      "title": "SSEP",
+      "descr": "Wurden somatosensible evozierte Potentiale (SSEP) zur Einschätzung der Prognose des Patienten erhoben?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "stemi": {
+      "title": "STEMI",
+      "descr": "Lag ein ST-Hebungsinfarkt (STEMI) vor?",
+      "option": {
+        "01": "ja",
+        "02": "nein"
+      }
+    },
+    "stokenn": {
+      "title": "Standort EV",
+      "descr": "Standort der innerklinischen Erstversorgung.",
+      "option": {
+        "01": "Inselspital"
+      }
+    },
+    "tee": {
+      "title": "TEE in < 6h",
+      "descr": "Wurde eine transösophageale Echokardiographie (TEE) innerhalb von 6 Stunden durchgeführt?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "tempaufn": {
+      "title": "Kerntemperatur",
+      "descr": "Körperkerntemperatur zum Zeitpunkt der Aufnahme (unabhängig vom Ort der Messung).",
+      "radio": {
+        "99.9": "nicht messbar"
+      }
+    },
+    "thlimit": {
+      "title": "Therapielimitierung",
+      "descr": "Wurde die Therapie bewusst limitiert?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "trop2aaufn": {
+      "title": "2. Troponin - absolut",
+      "descr": "2. Troponin-Wert (<12h nach erster Abnahme)."
+    },
+    "trop2aufn": {
+      "title": "2. Troponin",
+      "descr": "2. Troponin-Wert (<12h nach erster Abnahme). Angabe als Vielfaches des oberen Normwertes (berücksichtigt verschiedene Assays)."
+    },
+    "tropaaufn": {
+      "title": "1. Troponin - absolut",
+      "descr": "Troponin T hs (hochsensitiv)."
+    },
+    "tropart": {
+      "title": "Troponinart",
+      "descr": "Troponinart, wie von Ihrem Labor bestimmt.",
+      "option": {
+        "01": "Troponin T/I",
+        "02": "Troponin T hs (hochsensitiv)"
+      }
+    },
+    "tropaufn": {
+      "title": "1. Troponin",
+      "descr": "Troponin-Wert zum Zeitpunkt der stationären Aufnahme. Angabe als Vielfaches des oberen Normwertes (berücksichtigt verschiedene Assays)."
+    },
+    "troponw": {
+      "title": "Oberer Normalwert Troponin",
+      "descr": "Oberer Normalwer Troponin, wie von Ihrem Labor angegeben."
+    },
+    "tte": {
+      "title": "TTE in < 6h",
+      "descr": "Wurde eine transthorakale Echokardiographie (TTE) innerhalb von 6 Stunden durchgeführt?",
+      "option": {
+        "01": "ja",
+        "03": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "urkrstst": {
+      "title": "durch Notarzt vermutete Ursache des Herz-Kreislauf-Stillstands",
+      "descr": "Welche durch den Notarzt vermutete Ursache lag dem Herz-Kreislauf-Stillstand zu Grunde?",
+      "option": {
+        "01": "kardial",
+        "02": "Trauma",
+        "03": "Ertrinken",
+        "04": "Hypoxie",
+        "05": "Intoxikation",
+        "06": "ICB/SAB",
+        "07": "SIDS",
+        "08": "Verbluten",
+        "09": "Stroke",
+        "10": "metabolisch",
+        "11": "Sonstiges",
+        "12": "Sepsis",
+        "99": "nicht bekannt"
+      }
+    },
+    "urkrststaufn": {
+      "title": "klinisch gesicherte Ursache des Herz-Kreislauf-Stillstand",
+      "descr": "Welche klinisch gesicherte Ursache lag dem Herz-Kreislauf-Stillstand zu Grunde?",
+      "option": {
+        "01": "medizinisch",
+        "02": "Trauma",
+        "03": "Ertrinken",
+        "04": "Asphyxie",
+        "05": "Intoxikation",
+        "13": "Stromschlag",
+        "98": "sonstige",
+        "99": "nicht bekannt"
+      }
+    },
+    "vdatum": {
+      "title": "Datum Weiterverlegung",
+      "descr": "Wann (Datum) wurde der Patient weiterverlegt?"
+    },
+    "wvgrund": {
+      "title": "Grund der Verlegung",
+      "descr": "Warum erfolgte die Weiterverlegung?",
+      "option": {
+        "01": "Verlegung zur  Koronarangiographie/PCI",
+        "02": "Verlegung zur operativen Revaskularisierung",
+        "03": "Verlegung zur erweiterten operativen Therapie (z.B. Neurochirurgie)",
+        "04": "Verlegung zur erweiterten Intensivtherapie",
+        "05": "mangelnde Intensivkapazität",
+        "06": "Rehabilitation",
+        "07": "Therapiebegrenzung",
+        "98": "Sonstiges"
+      }
+    },
+    "wvwie": {
+      "title": "Weiterverlegung",
+      "descr": "Erfolgte eine Weiterverlegung?",
+      "option": {
+        "01": "ja",
+        "02": "nein",
+        "99": "nicht bekannt"
+      }
+    },
+    "zadatum": {
+      "title": "Zeit der Aufnahme",
+      "descr": "Die Uhrzeit der Aufnahme in das Krankenhaus bzw. die weiterbehandelnde Einheit."
+    },
+    "zchdm": {
+      "title": "Herzdruckmassage",
+      "descr": "Wer hat mit der Herzdruckmassage begonnen bzw. den Beginn angeordnet? (Es ist die jeweils am höchsten qualifizierte anwesende Person zu kodieren.)",
+      "option": {
+        "01": "Ersthelfer",
+        "02": "First Responder/Stationsteam",
+        "03": "RTW",
+        "04": "Notarzt/Notfallteam",
+        "99": "nicht bekannt"
+      }
+    },
+    "zckb": {
+      "title": "Kollaps beobachtet",
+      "descr": "Wer hat den Kollaps beobachtet? Der Ersthelfer hat auf ungeregeltem Weg von einem Notfall erfahren. Er hilft spontan in unterschiedlichem Umfang und Qualität (von Laien bis Arzt). Im Reanimationsregister umfasst der Begriff „First Responder“ (lat. Respon-dere = antworten) alle, die auf eine organisierte Alarmierung hin „antworten“ und zum Notfall eilen.",
+      "option": {
+        "01": "Ersthelfer",
+        "02": "First Responder/Stationsteam",
+        "03": "RTW",
+        "04": "Notarzt/Notfallteam",
+        "05": "nicht beobachtet",
+        "98": "keine Angabe, Pat. nicht reanimiert"
+      }
+    },
+    "zcoro": {
+      "title": "Koronarangiographie - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde die Koronarangiographie durchgeführt?"
+    },
+    "zct": {
+      "title": "CT - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde das CT durchgeführt?"
+    },
+    "zecls": {
+      "title": "ECLS - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde das ECLS-System implantiert?"
+    },
+    "zekg12": {
+      "title": "12-Kanal-EKG - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde das 12-Kanal-EKG durchgeführt?"
+    },
+    "zhdm": {
+      "title": "Zeitpunkt Herzdruckmassage Start",
+      "descr": "Erster Zeitpunkt, zu dem mit der Herzdruckmassage begonnen wurde."
+    },
+    "ziabp": {
+      "title": "IABP - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde das IABP-System implantiert?"
+    },
+    "zieltemp1": {
+      "title": "Zieltemperatur",
+      "descr": "Welche Zieltemperatur wurde gewählt?",
+      "option": {
+        "01": "< 32 °C",
+        "02": "32 - 34 °C",
+        "03": "34 - 36 °C",
+        "04": "36 - 37 °C",
+        "99": "nicht bekannt"
+      }
+    },
+    "zimpella": {
+      "title": "IMPELLA - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde das IMPELLA-System implantiert?"
+    },
+    "zkoll": {
+      "title": "Kollaps Zeitpunkt",
+      "descr": "Der Zeitpunkt des Kollaps des Patienten, soweit dieser beobachtet oder direkt bemerkt worden ist. Bei Eintritt des Herz-Kreislauf-Stillstandes nach Alarmierung des Rettungsdienstes/Notfallteam kann sich diese Zeit daher ausserhalb der Reihenfolge Kollaps--Alarm-­Eintreffen etc. befinden."
+    },
+    "zkuebgp": {
+      "title": "Zielklinik Patientenübergabe",
+      "descr": "An welchem Ort erfolgte die primäre Übergabe/Aufnahme des Patienten?",
+      "option": {
+        "00": "nicht dokumentiert",
+        "01": "ZNA/INA",
+        "02": "Schockraum",
+        "03": "Intensivstation",
+        "04": "Allgemeinstation",
+        "05": "Herzkatheterlabor HKL",
+        "06": "Stroke Unit",
+        "07": "OP direkt",
+        "08": "Fachambulanz",
+        "99": "anderer Übergabeort"
+      }
+    },
+    "zkuehlbeg": {
+      "title": "Beginn Temperaturmanagement - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde mit der aktiven Kühlung bzw. mit dem Temperaturmanagement begonnen?",
+      "radio": {
+        "99:99": "nicht bekannt"
+      }
+    },
+    "zlyse": {
+      "title": "Lyse - Uhrzeit",
+      "descr": "Wann (Uhrzeit) erfolgte die Lysetherapie?"
+    },
+    "zrosc1": {
+      "title": "Zeitpunkt 1. ROSC",
+      "descr": "Bei Wiedereintritt eines Eigenkreislaufs (ROSC) ist die Zeit zu notieren. Ab diesem Zeitpunkt hat der Patient einen, wie auch immer gearteten, eigenen Kreislauf mit einem messbaren Puls. ROSC = Return of Spontaneous Circulation (Spontankreislauf)."
+    },
+    "zroscaufn": {
+      "title": "Zeitpunkt 1. ROSC im Krankenhaus",
+      "descr": "Zeitpunkt 1. ROSC im Krankenhaus, wenn Aufnahme unter laufender CPR.",
+      "radio": {
+        "99:99": "niemals ROSC"
+      }
+    },
+    "ztod": {
+      "title": "Todeszeitpunkt",
+      "descr": "Wann (Uhrzeit) verstarb der Patient?",
+      "radio": {
+        "99:99": "nicht bekannt"
+      }
+    },
+    "zvdatum": {
+      "title": "Uhrzeit Weiterverlegung",
+      "descr": "Wann (Uhrzeit) wurde der Patient weiterverlegt?"
+    },
+    "zzieltemp": {
+      "title": "Zieltemperatur erreicht - Uhrzeit",
+      "descr": "Wann (Uhrzeit) wurde die Zieltemperatur erreicht?"
+    },
+    "section": {
+      "1": "Stammdaten",
+      "2": "Erstversorgung",
+      "3": "Aufnahmestatus",
+      "4": "Innerklinische Massnahmen",
+      "5": "eCPR",
+      "6": "Temperaturmanagement",
+      "7": "Neuroprognostische Tests",
+      "8": "Ergebnis"
+    }
+  },
+  "language": {
+    "1": "Deutsch",
+    "2": "Englisch",
+    "3": "Französisch",
+    "4": "Italienisch"
+  },
+  "paginator": {
+    "of": "{{startIndex}} - {{endIndex}} von {{length}}",
+    "protocol": "Protokolle pro Seite: ",
+    "user": "Benutzer pro Seite: "
+  }
+}

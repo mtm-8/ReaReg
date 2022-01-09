@@ -1,0 +1,75 @@
+{
+  "evProtocol": {
+    "emergencyService": {
+      "title": "Numéro rapport ambulance"
+    },
+    "ekg1": {
+      "title": "Rythme cardiaque observé par Service de sauvetage",
+      "option": {
+        "1800": "Fibrillation ventriculaire",
+        "1801": "Tachycardie ventriculaire",
+        "1802": "AED, choc",
+        "1803": "AED, pas de choc",
+        "1804": "AESP",
+        "1805": "Asystolie",
+        "1806": "Bradycardie extrême",
+        "1807": "Rythme sinusal <60/min (Âge < 14 ans)",
+        "1808": "Inconnu"
+      }
+    },
+    "urkrstst": {
+      "title": "Cause de l'arrêt cardiaque",
+      "option": {
+        "1575": "Médical",
+        "1576": "Traumatique",
+        "1577": "Intoxication",
+        "1578": "Noyade",
+        "1579": "Électrisation",
+        "1580": "Étouffement"
+      }
+    },
+    "einsaort_cac": {
+      "title": "Lieu d'intervention",
+      "option": {
+        "1565": "Domicile",
+        "1566": "Maison de retraite",
+        "1567": "Industrie / Lieu travail",
+        "1568": "Sport / Loisirs",
+        "1569": "Rue / Lieu public",
+        "1570": "Bâtiment public",
+        "1571": "Lieu de formation / École",
+        "2079": "Cabinet médical",
+        "2741": "Autre établissement de santé",
+        "1572": "Autres",
+        "1573": "Inconnu"
+      }
+    },
+    "zckb": {
+      "title": "PC observée",
+      "option": {
+        "2066": "Pas observée",
+        "2067": "Par témoin",
+        "2068": "Par First Responder",
+        "2069": "Par service sauvetage",
+        "2070": "Inconnu"
+      }
+    },
+    "rosc": {
+      "title": "ROSC",
+      "option": {
+        "1613": "Oui",
+        "1614": "Non",
+        "1615": "Inconnu"
+      }
+    },
+    "autocpr": {
+      "title": "Massage cardiaque par Service de sauvetage",
+      "option": {
+        "1863": "Principalement manuel",
+        "1864": "Principalement mécanique",
+        "1865": "Inconnu"
+      }
+    },
+    "noMatch": "Aucune correspondance possible"
+  }
+}

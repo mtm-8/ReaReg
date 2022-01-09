@@ -1,0 +1,54 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button and page title -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"userPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Content -->
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="0">
+      <!-- Title -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>password</mat-icon>
+          {{'userPage.subTitleUser'|translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Form  -->
+      <form (ngSubmit)="changeUserPassword()" [formGroup]="userForm" class="user-form" method="post">
+        <!-- Input fields with error message -->
+        <mat-form-field>
+          <mat-label>{{'userPage.labelPassword' | translate}}</mat-label>
+          <input autocomplete="new-password" formControlName="password" matInput name="password" required type="password">
+        </mat-form-field>
+        <mat-error *ngIf="userForm.controls.password.hasError('required') && submitCheck">{{'error.required' | translate}}</mat-error>
+        <mat-error *ngIf="userForm.controls.password.hasError('minlength')">{{'userPage.error.password1' | translate}}</mat-error>
+        <mat-error *ngIf="userForm.controls.password.hasError('pattern')">{{'userPage.error.password2' | translate}}</mat-error>
+        <mat-form-field>
+          <mat-label>{{'userPage.labelConfirmPassword' | translate}}</mat-label>
+          <input autocomplete="new-password" formControlName="confirmPassword" matInput name="confirmPassword" required type="password">
+          <mat-error *ngIf="userForm.controls.confirmPassword.hasError('required')">{{'error.required' | translate}}</mat-error>
+          <mat-error *ngIf="userForm.errors?.passwordMatchValidator && userForm.value['confirmPassword'].length > 0">{{'userPage.error.confirmPassword' | translate}}</mat-error>
+        </mat-form-field>
+        <!-- Save button -->
+        <button class="submit" color="primary" mat-raised-button type="submit">
+          <mat-icon>save</mat-icon>
+          {{'userPage.buttonSave' | translate}}
+        </button>
+      </form>
+      <!-- Loading bar -->
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    </mat-expansion-panel>
+  </mat-sidenav-content>
+</mat-sidenav-container>

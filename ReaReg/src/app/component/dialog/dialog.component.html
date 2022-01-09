@@ -1,0 +1,10 @@
+<!-- Title of dialog -->
+<h2 mat-dialog-title>{{data.title | translate}}</h2>
+<!-- Dialog content -->
+<mat-dialog-content>
+  {{data.content | translate}}
+</mat-dialog-content>
+<!-- Close Button -->
+<mat-dialog-actions class="center">
+  <button [mat-dialog-close]="true" color="primary" mat-raised-button>{{"message.action" | translate}}</button>
+</mat-dialog-actions>

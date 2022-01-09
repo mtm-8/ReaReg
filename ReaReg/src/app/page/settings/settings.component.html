@@ -1,0 +1,46 @@
+<!-- Setup side navigation -->
+<mat-sidenav-container hasBackdrop="true">
+  <mat-sidenav #drawer [autoFocus]="false" mode="over">
+    <!-- Menu -->
+    <app-menu></app-menu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <!-- Menu button and page title -->
+      <mat-toolbar-row>
+        <button (click)="drawer.toggle()" mat-button>
+          <mat-icon>menu</mat-icon>
+          {{"menu.title" | translate}}
+        </button>
+        <span class="toolbar-title">{{"settingsPage.title"| translate}}</span>
+        <span class="spacer-120"></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+    <!-- Content -->
+    <mat-expansion-panel class="mat-expansion-panel-bodyWithPadding" expanded="0">
+      <!-- Title -->
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <mat-icon>language</mat-icon>
+          {{'settingsPage.subTitle3.1' |translate}}
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <!-- Form  -->
+      <form (ngSubmit)="changeLanguage()" class="formSettings">
+        <!-- Languages radiobuttons -->
+        <mat-radio-group [(ngModel)]="language" class="radio-group" color="primary" name="language">
+          <mat-radio-button class="radio-button" value="de">{{'language.1' | translate}}</mat-radio-button>
+          <mat-radio-button class="radio-button" value="en">{{'language.2' | translate}}</mat-radio-button>
+          <mat-radio-button class="radio-button" value="fr">{{'language.3' | translate}}</mat-radio-button>
+          <mat-radio-button class="radio-button" value="it">{{'language.4' | translate}}</mat-radio-button>
+          <!-- New languages here -->
+        </mat-radio-group>
+        <!-- Change button -->
+        <button class="submit" color="primary" mat-raised-button type="submit">
+          <mat-icon>save</mat-icon>
+          {{'settingsPage.buttonSave' | translate}}
+        </button>
+      </form>
+    </mat-expansion-panel>
+  </mat-sidenav-content>
+</mat-sidenav-container>

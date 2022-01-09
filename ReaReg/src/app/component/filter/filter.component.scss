@@ -1,0 +1,16 @@
+// Centering the filter components
+.filter {
+  text-align: center;
+}
+
+// Set position of reset button
+.filter button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+// Set position of filter inputs and filter checkbox
+.filter mat-form-field, .filter .mat-checkbox {
+  margin: 5px;
+}

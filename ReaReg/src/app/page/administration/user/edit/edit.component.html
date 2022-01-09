@@ -1,0 +1,66 @@
+<mat-toolbar color="primary">
+  <!-- Title -->
+  <mat-toolbar-row>
+    <span class="toolbar-title">{{"administrationPage.title"| translate}}</span>
+    <span class="spacer-120"></span>
+  </mat-toolbar-row>
+</mat-toolbar>
+<!-- Content check if user is administrator -->
+<div *ngIf="authorization===3">
+  <!-- Page header with title and cancel button -->
+  <div class="head">
+    <h2>{{"administrationPage.user.edit.title"| translate}}</h2>
+    <button class="cancel" color="warn" mat-stroked-button routerLink="/administration">
+      <mat-icon>close</mat-icon>
+      {{"message.cancel" | translate}}</button>
+  </div>
+  <div>
+    <!-- User information fields -->
+    <form (submit)="editUser()" [formGroup]="userForm" class="user-form">
+      <mat-form-field>
+        <mat-label>{{'userPage.labelUsername' | translate}}</mat-label>
+        <input formControlName="username" matInput name="username" required type="text">
+        <mat-error *ngIf="userForm.controls['username'].hasError('minlength')">{{'administrationPage.user.add.error.username1' | translate}}</mat-error>
+        <mat-error *ngIf="userForm.controls['username'].hasError('userAlreadyExists')">{{'administrationPage.user.add.error.username3' | translate}} </mat-error>
+        <mat-error *ngIf="userForm.controls['username'].hasError('maxlength')">{{'administrationPage.user.add.error.username2' | translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>{{'userPage.labelPassword' | translate}}</mat-label>
+        <input autocomplete="new-password" formControlName="password" matInput name="password" type="password">
+      </mat-form-field>
+      <mat-error *ngIf="userForm.controls['password'].hasError('minlength')">{{'userPage.error.password1' | translate}}</mat-error>
+      <mat-error *ngIf="userForm.controls['password'].hasError('pattern')">{{'userPage.error.password2' | translate}}</mat-error>
+      <mat-form-field>
+        <mat-label>{{'userPage.labelConfirmPassword' | translate}}</mat-label>
+        <input autocomplete="new-password" formControlName="confirmPassword" matInput name="confirmPassword" type="password">
+      </mat-form-field>
+      <mat-error *ngIf="userForm.errors?.passwordMatchValidator && userForm.value['confirmPassword'].length > 0">{{'userPage.error.confirmPassword' | translate}}</mat-error>
+      <mat-form-field *ngIf="userId != id ">
+        <mat-label>{{"administrationPage.user.add.authorization" | translate}}</mat-label>
+        <mat-select formControlName="authorization" required value="1">
+          <mat-option value="1">{{"authorization.1" | translate}}</mat-option>
+          <mat-option value="2">{{"authorization.2" | translate}}</mat-option>
+          <mat-option value="3">{{"authorization.3" | translate}}</mat-option>
+        </mat-select>
+        <mat-error>{{"error.required" | translate}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>{{'administrationPage.user.add.stepper5' | translate}}</mat-label>
+        <input formControlName="token" matInput name="token" type="text">
+        <mat-error *ngIf="userForm.controls['token'].hasError('token')">{{'administrationPage.user.add.error.token' | translate}}</mat-error>
+      </mat-form-field>
+      <!-- Save button -->
+      <button [disabled]="!userForm.valid" class="submit" color="primary" mat-raised-button>
+        <mat-icon>save</mat-icon>
+        {{'userPage.buttonSave' | translate}}
+      </button>
+      <!-- Delete button (if user does not edit himself) -->
+      <button (click)="delete()" *ngIf="userId != id " class="submit" color="warn" mat-raised-button type="button">
+        <mat-icon>close</mat-icon>
+        {{'message.deleteUser' | translate}}
+      </button>
+    </form>
+    <!-- Loading bar -->
+    <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+  </div>
+</div>

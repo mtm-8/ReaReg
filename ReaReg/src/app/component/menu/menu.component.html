@@ -1,0 +1,49 @@
+<!-- Menu title -->
+<h2>{{'menu.title' | translate}}</h2>
+<!-- Navigation List -->
+<mat-nav-list>
+  <!-- Menuitem overview -->
+  <a *ngIf="this.authService.isAuthenticated()" mat-list-item routerLink="/overview" routerLinkActive="active-link">
+    <mat-icon color="primary">dashboard</mat-icon>
+    <span>{{'menu.overview' | translate}}</span>
+  </a>
+  <!-- Menuitem import -->
+  <a *ngIf="this.authService.isAuthorizedLvl2()" mat-list-item routerLink="/import" routerLinkActive="active-link">
+    <mat-icon color="primary">file_download</mat-icon>
+    <span>{{'menu.import' | translate}}</span>
+  </a>
+  <!-- Menuitem export -->
+  <a *ngIf="this.authService.isAuthorizedLvl2()" mat-list-item routerLink="/export" routerLinkActive="active-link">
+    <mat-icon color="primary">file_upload</mat-icon>
+    <span>{{'menu.export' | translate}}</span>
+  </a>
+  <!-- Menuitem user -->
+  <a *ngIf="this.authService.isAuthenticated()" mat-list-item routerLink="/user" routerLinkActive="active-link">
+    <mat-icon color="primary">account_circle</mat-icon>
+    <span>{{'menu.user' | translate}}</span>
+  </a>
+  <!-- Menuitem settings -->
+  <a *ngIf="this.authService.isAuthenticated()" mat-list-item routerLink="/settings" routerLinkActive="active-link">
+    <mat-icon color="primary">settings</mat-icon>
+    <span>{{'menu.settings' | translate}}</span>
+  </a>
+  <!-- Menuitem administration -->
+  <a *ngIf="this.authService.isAuthorizedLvl3()" mat-list-item routerLink="/administration" routerLinkActive="active-link">
+    <mat-icon color="primary">tune</mat-icon>
+    <span>{{'menu.administration' | translate}}</span>
+  </a>
+  <!-- Menuitem legal -->
+  <a *ngIf="this.authService.isAuthenticated()" mat-list-item routerLink="/legal" routerLinkActive="active-link">
+    <mat-icon color="primary">gavel</mat-icon>
+    <span>{{'menu.legal' | translate}}</span>
+  </a>
+  <!-- Divider element -->
+  <mat-divider></mat-divider>
+  <!-- Logout Button -->
+  <a (click)="logout()" mat-list-item>
+    <mat-icon color="primary">logout</mat-icon>
+    <span>{{'menu.logout' | translate}}</span>
+  </a>
+</mat-nav-list>
+<!-- Navigation image bottom -->
+<img alt="logo" src="assets/images/logo.png">

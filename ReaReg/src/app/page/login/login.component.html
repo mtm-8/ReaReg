@@ -1,0 +1,43 @@
+<!-- Blue background -->
+<div class="blueBackground">
+  <!-- Login card -->
+  <mat-card class="centerCard">
+    <!-- Header image -->
+    <mat-card-header>
+      <img alt="logo" mat-card-sm-image src="assets/images/logo.png">
+    </mat-card-header>
+    <mat-card-content>
+      <form (submit)="login()" [formGroup]="loginForm" class="auth-form" method="post">
+        <!-- Form fields username with error message -->
+        <mat-form-field>
+          <mat-label>{{'loginPage.labelUsername' | translate}}</mat-label>
+          <input formControlName="username" matInput name="username" required type="text">
+          <mat-error *ngIf="!loginForm.controls.username.valid">{{'loginPage.error.username' | translate}}</mat-error>
+        </mat-form-field>
+        <!--Form fields password with error message and hide and show password -->
+        <mat-form-field>
+          <mat-label>{{'loginPage.labelPassword' | translate}}</mat-label>
+          <input [type]="hide ? 'password' : 'text'" formControlName="password" matInput name="password" required>
+          <button (click)="hide = !hide" [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide" mat-icon-button matSuffix type="button">
+            <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+          </button>
+          <mat-error *ngIf="!loginForm.controls.password.valid">{{'loginPage.error.password' | translate}}</mat-error>
+        </mat-form-field>
+        <!-- Form submit button -->
+        <button [disabled]="loading" class="submit" color="primary" mat-raised-button>
+          {{'loginPage.button' | translate}}
+          <mat-icon aria-hidden="false" aria-label="Example home icon">login</mat-icon>
+        </button>
+      </form>
+      <div class="loginLanguage">
+        <a (click)="changeLanguage('de')">{{'language.1'| translate}}</a>
+        <a (click)="changeLanguage('en')">{{'language.2'| translate}}</a>
+        <a (click)="changeLanguage('fr')">{{'language.3'| translate}}</a>
+        <a (click)="changeLanguage('it')">{{'language.4'| translate}}</a>
+        <!-- New language here -->
+      </div>
+      <!-- Loading bar -->
+      <mat-progress-bar *ngIf="loading" mode="indeterminate"></mat-progress-bar>
+    </mat-card-content>
+  </mat-card>
+</div>
